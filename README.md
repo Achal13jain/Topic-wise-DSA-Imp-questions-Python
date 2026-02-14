@@ -34,11 +34,11 @@ A comprehensive collection of **Data Structures and Algorithms** problems organi
 ## 📌 Problem Index (Quick Navigation)
 | Problem | Topic | Difficulty | Solution |
 |--------|------|------------|----------|
-| Two Sum | Array | Easy | [View](./02.%20Array%20and%20prefix_sum/two_sum.py) |
-| Kadane's Algorithm | Array | Medium | [View](./02.%20Array%20and%20prefix_sum/kadane.py) |
-| Valid Parentheses | Stack | Easy | [View](./06.%20Stack%20&%20Queue/valid_parentheses.py) |
-| Binary Search | Binary Search | Easy | [View](./09.%20Binary%20Search/binary_search.py) |
-| Reverse Linked List | Linked List | Easy | [View](./07.%20Linked%20List/reverse_linked_list.py) |
+| Two Sum | Array | Easy | [View](./02.%20Array%20and%20prefix_sum/1.%20TwoSum.py) |
+| Kadane's Algorithm | Array | Medium | [View](./02.%20Array%20and%20prefix_sum/2.%20MaxSumSubArr_IMP.py) |
+| Valid Parentheses | Stack (Strings) | Easy | [View](./03.%20Strings/1.%20validParanthesis.py) |
+| Binary Search | Binary Search | Easy | [View](./09.%20Binary%20Search/1.%20BinarySearch.py) |
+| Reverse Linked List | Linked List | Easy | [View](./07.%20Linked%20List/1.%20ReverseLL.py) |
 
 
 ## 🏢 Problems Asked At
