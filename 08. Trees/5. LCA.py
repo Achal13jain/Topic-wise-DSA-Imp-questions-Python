@@ -1,3 +1,12 @@
+"""
+Problem: Lowest Common Ancestor of a Binary Tree
+LeetCode: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+
+Time Complexity: O(n)
+Space Complexity: O(h)
+Why optimal: Single pass DFS finds targets and bubbles up the LCA without extra storage.
+"""
+
 # Find lowest common ancestor of nodes p and q.
 
 # 🔹 Idea

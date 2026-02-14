@@ -1,3 +1,12 @@
+"""
+Problem: Subtree of Another Tree
+LeetCode: https://leetcode.com/problems/subtree-of-another-tree/
+
+Time Complexity: O(n * m) (Worst case); can be optimized to O(n+m) via Merkle hashing or serialization.
+Space Complexity: O(h)
+Why optimal: Standard recursive check is intuitive; advanced linear approaches exist but are complex to implement.
+"""
+
 # Check if subRoot is a subtree of root.
 
 # 🔹 Idea

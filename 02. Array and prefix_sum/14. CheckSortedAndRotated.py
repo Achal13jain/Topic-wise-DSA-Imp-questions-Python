@@ -1,3 +1,12 @@
+"""
+Problem: Check if Array Is Sorted and Rotated
+LeetCode: https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Single pass to count the number of "drops" in value. A valid sorted-rotated array has at most one drop.
+"""
+
 # Check if an array is sorted and rotated
 class Solution:
     def check(self, nums) -> bool:

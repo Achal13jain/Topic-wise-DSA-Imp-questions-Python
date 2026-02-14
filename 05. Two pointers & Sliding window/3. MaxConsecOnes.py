@@ -1,3 +1,12 @@
+"""
+Problem: Max Consecutive Ones III
+LeetCode: https://leetcode.com/problems/max-consecutive-ones-iii/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Sliding window approach counts zeros and shrinks window when limit k is exceeded.
+"""
+
 # Given a binary array nums and integer k,
 # you may flip at most k zeros to ones.
 

@@ -1,3 +1,12 @@
+"""
+Problem: Maximum Subarray Sum (Kadane's Algorithm)
+LeetCode: https://leetcode.com/problems/maximum-subarray/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Kadane's Algorithm is the standard linear time solution for this problem.
+"""
+
 # The maximum sum of a contiguous subarray.
 
 # 🔹 Idea (Kadane) (sliding window)

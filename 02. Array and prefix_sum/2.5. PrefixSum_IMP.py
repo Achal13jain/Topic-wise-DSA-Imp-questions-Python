@@ -1,3 +1,12 @@
+"""
+Problem: Range Sum Query - Immutable (Prefix Sum Implementation)
+LeetCode: https://leetcode.com/problems/range-sum-query-immutable/
+
+Time Complexity: O(n) for build, O(1) for query
+Space Complexity: O(n)
+Why optimal: Precomputing prefix sums allows for constant time range sum queries.
+"""
+
 # 1. Prefix Sum Array Implementation
 
 def prefix_sum(arr):

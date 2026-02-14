@@ -1,3 +1,12 @@
+"""
+Problem: Two Sum II - Input Array Is Sorted
+LeetCode: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Two pointer approach works in linear time because the array is sorted.
+"""
+
 # You are given a sorted array nums and a target.
 # Find 1-based indices of two numbers such that:
 # nums[i] + nums[j] = target

@@ -1,3 +1,12 @@
+"""
+Problem: Longest Consecutive Sequence
+LeetCode: https://leetcode.com/problems/longest-consecutive-sequence/
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+Why optimal: Using a hash set allows O(1) lookups to check for sequence starts and next elements.
+"""
+
 # Longest Consecutive Sequence
 # 🔹 Problem
 # Find length of longest consecutive elements sequence

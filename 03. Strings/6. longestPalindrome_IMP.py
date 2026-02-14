@@ -1,3 +1,12 @@
+"""
+Problem: Longest Palindromic Substring
+LeetCode: https://leetcode.com/problems/longest-palindromic-substring/
+
+Time Complexity: O(n^2)
+Space Complexity: O(1)
+Why optimal: Expand Around Center approach uses constant space compared to O(n^2) DP table.
+"""
+
 # Return the longest substring that is a palindrome.
 # 🔹 Idea (Expand Around Center)
 # Each index is a center

@@ -1,3 +1,12 @@
+"""
+Problem: Longest Common Subsequence
+LeetCode: https://leetcode.com/problems/longest-common-subsequence/
+
+Time Complexity: O(m * n)
+Space Complexity: O(m * n)
+Why optimal: Standard 2D DP solves for all prefixes of both strings.
+"""
+
 # Longest Common Subsequence
 # Given two strings, find length of longest subsequence common to both.
 

@@ -1,3 +1,12 @@
+"""
+Problem: Two Sum
+LeetCode: https://leetcode.com/problems/two-sum/
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+Why optimal: Uses a hash map to look up the complement in constant time O(1).
+"""
+
 #Two Sum
 
 # Idea (Hashing)

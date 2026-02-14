@@ -1,3 +1,12 @@
+"""
+Problem: Linked List Cycle
+LeetCode: https://leetcode.com/problems/linked-list-cycle/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Floyd's Cycle-Finding Algorithm (Slow & Fast Pointers) detects cycle in linear time with constant space.
+"""
+
 # Determine if a linked list has a cycle (loop).
 
 # 🔹 Idea (Slow & Fast Pointer)

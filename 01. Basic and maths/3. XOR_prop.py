@@ -1,3 +1,12 @@
+"""
+Problem: XOR Properties and Applications
+LeetCode: https://leetcode.com/problems/single-number/
+
+Time Complexity: O(n) for finding unique element
+Space Complexity: O(1)
+Why optimal: Uses XOR properties (a^a=0, a^0=a) to find unique elements without extra space.
+"""
+
 # Key Properties
 # A ^ A = 0
 # A ^ 0 = A

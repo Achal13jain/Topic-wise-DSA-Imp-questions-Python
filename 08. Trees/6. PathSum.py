@@ -1,3 +1,15 @@
+"""
+Problem: Path Sum (Variants I, II, III)
+LeetCode:
+- I: https://leetcode.com/problems/path-sum/
+- II: https://leetcode.com/problems/path-sum-ii/
+- III: https://leetcode.com/problems/path-sum-iii/
+
+Time Complexity: O(n)
+Space Complexity: O(h) (Recursion stack); Path Sum III uses O(h) map space.
+Why optimal: DFS traverses nodes once; Prefix sum map for III optimizes redundant path checks.
+"""
+
 # 🔹 Path Sum I
 
 # Check if root-to-leaf path equals target sum.

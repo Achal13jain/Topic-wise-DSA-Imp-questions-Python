@@ -1,3 +1,12 @@
+"""
+Problem: Gas Station
+LeetCode: https://leetcode.com/problems/gas-station/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Greedy check track total surplus; if checking from 'start' fails, no point between 'start' and current can be a valid start.
+"""
+
 # Given:
 # gas[i] = fuel at station i
 # cost[i] = fuel needed to reach next station

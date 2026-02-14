@@ -1,3 +1,12 @@
+"""
+Problem: 3Sum
+LeetCode: https://leetcode.com/problems/3sum/
+
+Time Complexity: O(n^2)
+Space Complexity: O(1) (excluding output storage)
+Why optimal: Sorting allows us to use the Two Pointer technique, avoiding O(n^3) brute force.
+"""
+
 # Given an integer array nums, return all unique triplets
 # [nums[i], nums[j], nums[k]] such that:
 

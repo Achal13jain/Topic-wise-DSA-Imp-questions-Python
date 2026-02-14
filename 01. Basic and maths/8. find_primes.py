@@ -1,3 +1,12 @@
+"""
+Problem: Count Primes (Sieve of Eratosthenes)
+LeetCode: https://leetcode.com/problems/count-primes/
+
+Time Complexity: O(n log log n)
+Space Complexity: O(n)
+Why optimal: Sieve of Eratosthenes is the standard efficient algorithm for finding all primes up to N.
+"""
+
 # Sieve of Eratosthenes
 # 🔹 Problem Statement (What is the question?)
 # You are given an integer n.

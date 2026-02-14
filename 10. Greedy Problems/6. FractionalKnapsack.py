@@ -1,3 +1,12 @@
+"""
+Problem: Fractional Knapsack
+LeetCode: N/A (GeeksForGeeks Classic)
+
+Time Complexity: O(n log n)
+Space Complexity: O(1)
+Why optimal: Taking items with highest value-to-weight ratio first strictly maximizes total value.
+"""
+
 # Given items with:
 # Value
 # Weight

@@ -1,3 +1,12 @@
+"""
+Problem: Allocate Minimum Pages / Split Array Largest Sum
+LeetCode: https://leetcode.com/problems/split-array-largest-sum/
+
+Time Complexity: O(n * log(sum(pages)))
+Space Complexity: O(1)
+Why optimal: Binary search on answer (pages) allows finding the minimum maximum directly.
+"""
+
 # Given an array where each element represents pages in a book,
 # allocate books to m students such that:
 # Each student gets contiguous books

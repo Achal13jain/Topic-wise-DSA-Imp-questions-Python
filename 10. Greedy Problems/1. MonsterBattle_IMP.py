@@ -1,3 +1,12 @@
+"""
+Problem: Defeat Monsters / Power Gaining
+LeetCode: N/A (Common Competitive Programming Greedy Problem)
+
+Time Complexity: O(n log n)
+Space Complexity: O(1)
+Why optimal: Fighting the weakest monsters first (greedy) maximizes power accumulation chance.
+"""
+
 # You have:
 # Initial power power
 # Array monsters[] (each monster has some power)

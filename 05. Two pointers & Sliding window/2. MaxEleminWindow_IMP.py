@@ -1,3 +1,12 @@
+"""
+Problem: Sliding Window Maximum
+LeetCode: https://leetcode.com/problems/sliding-window-maximum/
+
+Time Complexity: O(n)
+Space Complexity: O(k)
+Why optimal: Monotonic Deque ensures we only store useful indices, allowing O(1) checking of maximum.
+"""
+
 # Given an array nums and window size k,
 # return the maximum element in each sliding window.
 # Example

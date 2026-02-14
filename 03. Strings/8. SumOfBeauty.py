@@ -1,3 +1,12 @@
+"""
+Problem: Sum of Beauty of All Substrings
+LeetCode: https://leetcode.com/problems/sum-of-beauty-of-all-substrings/
+
+Time Complexity: O(n^2 * k) where k is alphabet size (26)
+Space Complexity: O(k)
+Why optimal: Iterates over all substrings and computes frequencies on the fly.
+"""
+
 # The beauty of a string is the difference in frequencies between the most frequent and least frequent characters.
 
 # For example, the beauty of "abaacc" is 3 - 1 = 2.

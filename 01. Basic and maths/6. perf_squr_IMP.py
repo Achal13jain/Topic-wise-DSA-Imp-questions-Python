@@ -1,3 +1,12 @@
+"""
+Problem: Valid Perfect Square
+LeetCode: https://leetcode.com/problems/valid-perfect-square/
+
+Time Complexity: O(log n)
+Space Complexity: O(1)
+Why optimal: Uses Binary Search to find the square root efficiently.
+"""
+
 #check if a number is a perfect square
 
 #Idea

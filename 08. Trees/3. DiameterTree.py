@@ -1,3 +1,12 @@
+"""
+Problem: Diameter of Binary Tree
+LeetCode: https://leetcode.com/problems/diameter-of-binary-tree/
+
+Time Complexity: O(n)
+Space Complexity: O(h)
+Why optimal: Calculates height and diameter in the same DFS traversal, avoiding repeated work.
+"""
+
 # Diameter = longest path between any two nodes (may or may not pass through root).
 
 # 🔹 Idea

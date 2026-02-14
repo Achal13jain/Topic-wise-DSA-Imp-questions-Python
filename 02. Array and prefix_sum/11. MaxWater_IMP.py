@@ -1,3 +1,12 @@
+"""
+Problem: Container With Most Water
+LeetCode: https://leetcode.com/problems/container-with-most-water/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Two Pointer approach greedily maximizes area by moving the shorter line, processing each element once.
+"""
+
 # Given an array height where each element represents a vertical line,
 # find two lines that together with the x-axis form a container that holds the maximum water.
 

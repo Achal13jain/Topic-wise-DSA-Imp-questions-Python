@@ -1,3 +1,12 @@
+"""
+Problem: Merge Sorted Array
+LeetCode: https://leetcode.com/problems/merge-sorted-array/
+
+Time Complexity: O(m + n)
+Space Complexity: O(1)
+Why optimal: Merges from the back to avoid shifting elements, allowing in-place modification.
+"""
+
 #Merge Sorted Array
 # Idea (Two Pointers from End)
 # Compare elements from the end of both arrays

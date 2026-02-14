@@ -1,3 +1,12 @@
+"""
+Problem: Minimum Platforms / Meeting Rooms II
+LeetCode: https://leetcode.com/problems/meeting-rooms-ii/ (Similar) / GeeksForGeeks
+
+Time Complexity: O(n log n)
+Space Complexity: O(1)
+Why optimal: Sorting arrivals and departures allows processing events in time order to find max overlap.
+"""
+
 # Given arrival and departure times of trains,
 # find minimum number of platforms needed so no train waits.
 

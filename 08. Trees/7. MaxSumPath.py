@@ -1,3 +1,12 @@
+"""
+Problem: Binary Tree Maximum Path Sum
+LeetCode: https://leetcode.com/problems/binary-tree-maximum-path-sum/
+
+Time Complexity: O(n)
+Space Complexity: O(h)
+Why optimal: Computes max contribution of each subtree during a single DFS traversal.
+"""
+
 # Find maximum sum path (any nodes, any direction).
 
 # 🔹 Idea

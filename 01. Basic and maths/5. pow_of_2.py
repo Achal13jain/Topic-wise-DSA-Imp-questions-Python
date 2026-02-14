@@ -1,3 +1,12 @@
+"""
+Problem: Power of Two
+LeetCode: https://leetcode.com/problems/power-of-two/
+
+Time Complexity: O(1)
+Space Complexity: O(1)
+Why optimal: Uses bitwise operation (n & (n-1)) to check for single set bit in constant time.
+"""
+
 #Check if a number is a power of 2
 
 #idea

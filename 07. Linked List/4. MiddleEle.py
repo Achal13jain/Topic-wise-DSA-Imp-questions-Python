@@ -1,3 +1,12 @@
+"""
+Problem: Middle of the Linked List
+LeetCode: https://leetcode.com/problems/middle-of-the-linked-list/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Slow and Fast pointer approach finds the middle in one traversal.
+"""
+
 # Return the middle node of a linked list.
 # If even length → return second middle.
 

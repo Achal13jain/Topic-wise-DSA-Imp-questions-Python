@@ -1,3 +1,12 @@
+"""
+Problem: Frequency Count
+LeetCode: N/A (Fundamental Concept)
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+Why optimal: Single pass using hash map to count frequencies is the standard efficient approach.
+"""
+
 # Count frequency of each element in an array without using collections.Counter.
 
 # 🔹 Idea

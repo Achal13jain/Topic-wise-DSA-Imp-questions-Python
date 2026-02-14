@@ -1,3 +1,12 @@
+"""
+Problem: Search in Rotated Sorted Array
+LeetCode: https://leetcode.com/problems/search-in-rotated-sorted-array/
+
+Time Complexity: O(log n)
+Space Complexity: O(1)
+Why optimal: Modified binary search identifies the sorted half to discard the other half efficiently.
+"""
+
 # An originally sorted array is rotated at some pivot.
 # Example:
 # [4,5,6,7,0,1,2]

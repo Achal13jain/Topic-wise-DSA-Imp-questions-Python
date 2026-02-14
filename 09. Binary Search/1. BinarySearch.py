@@ -1,3 +1,12 @@
+"""
+Problem: Binary Search
+LeetCode: https://leetcode.com/problems/binary-search/
+
+Time Complexity: O(log n)
+Space Complexity: O(1)
+Why optimal: Divides search space in half at each step, logarithmic time.
+"""
+
 # Given a sorted array and a target value,
 # find the index of the target. If not found, return -1.
 # Binary search works because the array is sorted.

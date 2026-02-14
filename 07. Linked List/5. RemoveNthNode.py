@@ -1,3 +1,12 @@
+"""
+Problem: Remove Nth Node From End of List
+LeetCode: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Two pointer approach creates a gap of N to find the target node in a single pass.
+"""
+
 # Remove the n-th node from the end in one pass.
 
 # 🔹 Idea (Two Pointers + Dummy)

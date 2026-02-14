@@ -1,3 +1,12 @@
+"""
+Problem: Job Sequencing Problem
+LeetCode: N/A (GeeksForGeeks Classic)
+
+Time Complexity: O(n^2) (Can be optimized to O(n log n) with Disjoint Set)
+Space Complexity: O(n)
+Why optimal: Greedy choice of doing the most profitable job as late as possible ensures maximum profit.
+"""
+
 # Each job has:
 # Deadline
 # Profit

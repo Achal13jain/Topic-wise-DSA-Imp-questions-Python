@@ -1,3 +1,12 @@
+"""
+Problem: Maximum Product Subarray
+LeetCode: https://leetcode.com/problems/maximum-product-subarray/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Tracks min and max products at each step to handle negative numbers in one pass.
+"""
+
 # Find maximum product of a contiguous subarray.
 
 # 🔹 DP Idea

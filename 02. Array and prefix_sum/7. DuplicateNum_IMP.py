@@ -1,3 +1,12 @@
+"""
+Problem: Find the Duplicate Number
+LeetCode: https://leetcode.com/problems/find-the-duplicate-number/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Uses Floyd's Cycle Detection (Tortoise and Hare) to find duplicate in linear time and constant space.
+"""
+
 # Array contains n+1 elements with numbers 1 to n.
 # Only one number is duplicated.
 

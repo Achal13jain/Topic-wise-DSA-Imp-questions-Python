@@ -1,3 +1,12 @@
+"""
+Problem: Longest Increasing Subsequence
+LeetCode: https://leetcode.com/problems/longest-increasing-subsequence/
+
+Time Complexity: O(n^2) (Implemented); O(n log n) exists (Patience Sorting).
+Space Complexity: O(n)
+Why optimal: DP approach builds solution by checking all previous elements for each index.
+"""
+
 # Longest Increasing Subsequence (LIS)
 # 🔹 Problem (Theory)
 # Find length of longest strictly increasing subsequence.

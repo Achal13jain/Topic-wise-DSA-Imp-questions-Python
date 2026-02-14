@@ -1,3 +1,12 @@
+"""
+Problem: Maximum Depth of Binary Tree
+LeetCode: https://leetcode.com/problems/maximum-depth-of-binary-tree/
+
+Time Complexity: O(n)
+Space Complexity: O(h) (recursion stack)
+Why optimal: Simple DFS approach visits every node once to determine maximum depth.
+"""
+
 # Find the maximum depth of the tree.
 
 # 🔹 Idea

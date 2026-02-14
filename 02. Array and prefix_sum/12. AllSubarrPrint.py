@@ -1,3 +1,12 @@
+"""
+Problem: Print All Subarrays
+LeetCode: N/A (Fundamental Concept)
+
+Time Complexity: O(n^3)
+Space Complexity: O(1)
+Why optimal: Iterates through all possible start and end points and prints slices (printing is O(n)).
+"""
+
 # Print all subarrays of an array
 def print_all_subarrays(arr):
     n = len(arr)

@@ -1,3 +1,12 @@
+"""
+Problem: Min Stack
+LeetCode: https://leetcode.com/problems/min-stack/
+
+Time Complexity: O(1) for all operations
+Space Complexity: O(n)
+Why optimal: Two-stack approach allows keeping track of the minimum at every state in constant time.
+"""
+
 # Design a stack that supports:
 # push
 # pop

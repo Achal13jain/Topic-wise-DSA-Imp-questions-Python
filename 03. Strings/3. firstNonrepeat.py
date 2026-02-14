@@ -1,3 +1,12 @@
+"""
+Problem: First Unique Character in a String
+LeetCode: https://leetcode.com/problems/first-unique-character-in-a-string/
+
+Time Complexity: O(n)
+Space Complexity: O(1) (ASCII size fixed)
+Why optimal: Two-pass approach (count freqs then check) is simple and linear.
+"""
+
 # First non repeating character in a string
 # 🔹 Idea (HashMap + Single Pass)
 # Count frequency of each character using a hashmap

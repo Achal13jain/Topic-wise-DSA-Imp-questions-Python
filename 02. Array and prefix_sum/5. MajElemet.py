@@ -1,3 +1,12 @@
+"""
+Problem: Majority Element
+LeetCode: https://leetcode.com/problems/majority-element/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Boyer-Moore Voting Algorithm finds the majority element in linear time with constant space.
+"""
+
 # Find the element appearing more than n/2 times.
 
 # 🔹 Idea (Boyer-Moore Voting Algorithm)

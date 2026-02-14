@@ -1,3 +1,12 @@
+"""
+Problem: Coin Change
+LeetCode: https://leetcode.com/problems/coin-change/
+
+Time Complexity: O(amount * n)
+Space Complexity: O(amount)
+Why optimal: Bottom-up DP solves subproblems for each amount from 0 to N.
+"""
+
 # Given coins and amount, find minimum number of coins to make amount.
 # 🔹 DP Idea
 # dp[x] = min(dp[x - coin]) + 1

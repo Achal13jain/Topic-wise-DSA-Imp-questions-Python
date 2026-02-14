@@ -1,3 +1,12 @@
+"""
+Problem: Modular Exponentiation (Pow(x, n) % m)
+LeetCode: https://leetcode.com/problems/powx-n/ (Similar: Modular Arithmetic variant)
+
+Time Complexity: O(log b)
+Space Complexity: O(1)
+Why optimal: Uses Binary Exponentiation (Squaring) to compute power in logarithmic time.
+"""
+
 # Problem Statement (What is the question?)
 
 # You are given:

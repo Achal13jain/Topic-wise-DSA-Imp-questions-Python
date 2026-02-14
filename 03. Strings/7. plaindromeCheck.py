@@ -1,3 +1,12 @@
+"""
+Problem: Valid Palindrome
+LeetCode: https://leetcode.com/problems/valid-palindrome/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Two pointer approach checks for palindrome in-place without creating new strings.
+"""
+
 # #Check if string is a palindrome (ignore non-alphanumeric, case insensitive).
 
 # 🔹 Idea (Two Pointers)

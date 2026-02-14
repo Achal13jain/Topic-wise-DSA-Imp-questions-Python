@@ -1,3 +1,12 @@
+"""
+Problem: Find Pivot Index (Equilibrium Index)
+LeetCode: https://leetcode.com/problems/find-pivot-index/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Computes total sum first, then iterates once maintaining left_sum and right_sum.
+"""
+
 # Given an array of integers, find the Equilibrium Index 
 # where the sum of elements on the left equals the sum of elements on the right.
 # Idea: Use prefix sums to track left and right sums efficiently.

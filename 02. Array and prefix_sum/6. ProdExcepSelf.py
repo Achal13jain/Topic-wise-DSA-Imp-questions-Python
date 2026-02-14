@@ -1,3 +1,12 @@
+"""
+Problem: Product of Array Except Self
+LeetCode: https://leetcode.com/problems/product-of-array-except-self/
+
+Time Complexity: O(n)
+Space Complexity: O(1) (excluding output array)
+Why optimal: Uses prefix and suffix products to compute result without division in linear time.
+"""
+
 # Product of Array Except Self
 # Idea (Prefix and Suffix Products)
 # For each index, product of all elements to the left and right

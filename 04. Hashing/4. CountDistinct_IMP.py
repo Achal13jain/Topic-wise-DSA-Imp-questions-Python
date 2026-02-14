@@ -1,3 +1,12 @@
+"""
+Problem: Count Distinct Elements in Every Window
+LeetCode: https://leetcode.com/problems/distinct-numbers-in-each-subarray/ (Similar logic)
+
+Time Complexity: O(n)
+Space Complexity: O(k)
+Why optimal: Sliding window with hash map maintains frequency counts efficiently as window moves.
+"""
+
 # Given array arr and window size k,
 # count distinct elements in each sliding window.
 

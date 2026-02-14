@@ -1,3 +1,12 @@
+"""
+Problem: Insert Delete GetRandom O(1)
+LeetCode: https://leetcode.com/problems/insert-delete-getrandom-o1/
+
+Time Complexity: O(1) for all operations
+Space Complexity: O(n)
+Why optimal: Combination of Hash Map (for index lookup) and Array (for random access) achieves O(1).
+"""
+
 # Design a data structure that supports:
 # insert(val)
 # remove(val)

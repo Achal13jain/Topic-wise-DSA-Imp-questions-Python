@@ -1,3 +1,12 @@
+"""
+Problem: Minimum Size Subarray Sum
+LeetCode: https://leetcode.com/problems/minimum-size-subarray-sum/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Sliding window approach expands and contracts, visiting each element at most twice.
+"""
+
 # Minimum Size Subarray Sum
 # Given an array of positive integers nums and a positive integer target, 
 # return the minimal length of a subarray whose sum is greater than or equal to target. 

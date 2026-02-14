@@ -1,3 +1,12 @@
+"""
+Problem: Binary Tree Level Order Traversal
+LeetCode: https://leetcode.com/problems/binary-tree-level-order-traversal/
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+Why optimal: Standard BFS using a queue processes nodes level by level efficiently.
+"""
+
 # Return nodes level by level.
 
 # 🔹 Idea (BFS)

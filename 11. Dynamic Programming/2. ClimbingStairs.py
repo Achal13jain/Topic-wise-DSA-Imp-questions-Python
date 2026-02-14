@@ -1,3 +1,12 @@
+"""
+Problem: Climbing Stairs
+LeetCode: https://leetcode.com/problems/climbing-stairs/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Reduces to Fibonacci sequence; can be solved iteratively with constant space.
+"""
+
 # You can climb 1 or 2 steps.
 # In how many distinct ways can you reach the top?
 # 🔹 DP Idea

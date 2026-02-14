@@ -1,3 +1,12 @@
+"""
+Problem: Palindrome Permutation
+LeetCode: https://leetcode.com/problems/palindrome-permutation/ (Premium) / Cracking the Coding Interview
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Counts character frequencies; a palindrome exists if at most one character has an odd count.
+"""
+
 # A wizard gives you a string S. Check if it is possible to rearrange the characters of S to form a Palindrome.
 
 def can_form_palindrome(s):

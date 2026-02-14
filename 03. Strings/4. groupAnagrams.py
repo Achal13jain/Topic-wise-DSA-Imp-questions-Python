@@ -1,3 +1,12 @@
+"""
+Problem: Group Anagrams
+LeetCode: https://leetcode.com/problems/group-anagrams/
+
+Time Complexity: O(n * k)
+Space Complexity: O(n * k)
+Why optimal: Using character count tuple as dictionary key avoids sorting (O(k log k)), making it O(k) per word.
+"""
+
 #Group strings that are anagrams of each other.
 # 🔹 Idea (Character Frequency Key)
 # Anagrams have same character counts

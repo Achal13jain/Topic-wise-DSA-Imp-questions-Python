@@ -1,3 +1,12 @@
+"""
+Problem: Valid Parentheses
+LeetCode: https://leetcode.com/problems/valid-parentheses/
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+Why optimal: Stack is the standard data structure for matching nested structures like parentheses.
+"""
+
 #Check balanced paranthesis in a string
 
 #Idea 

@@ -1,3 +1,12 @@
+"""
+Problem: Subarray Sum Equals K
+LeetCode: https://leetcode.com/problems/subarray-sum-equals-k/
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+Why optimal: Uses a hash map to store prefix sum frequencies, allowing O(1) lookups for subarrays ending at current index.
+"""
+
 # Count number of continuous subarrays whose sum equals k
 
 # 🔹 Idea (Prefix Sum + Hashing)

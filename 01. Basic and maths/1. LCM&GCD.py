@@ -1,3 +1,12 @@
+"""
+Problem: LCM and GCD of two numbers
+LeetCode: https://leetcode.com/problems/find-greatest-common-divisor-of-array/ (Similar Concept)
+
+Time Complexity: O(log min(a, b))
+Space Complexity: O(1)
+Why optimal: Euclidean algorithm is the most efficient method for GCD.
+"""
+
 # Function to compute GCD and LCM of two numbers
 
 #Idea (Euclid)

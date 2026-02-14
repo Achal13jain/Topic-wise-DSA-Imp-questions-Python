@@ -1,3 +1,12 @@
+"""
+Problem: Merge Intervals
+LeetCode: https://leetcode.com/problems/merge-intervals/
+
+Time Complexity: O(n log n)
+Space Complexity: O(n)
+Why optimal: Sorting by start time allows merging overlaps in a single linear pass.
+"""
+
 # Given intervals [start, end],
 # merge overlapping intervals.
 

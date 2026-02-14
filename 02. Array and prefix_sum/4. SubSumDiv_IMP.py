@@ -1,3 +1,12 @@
+"""
+Problem: Subarray Sums Divisible by K
+LeetCode: https://leetcode.com/problems/subarray-sums-divisible-by-k/
+
+Time Complexity: O(n)
+Space Complexity: O(min(n, k)) - HashMap size
+Why optimal: Uses prefix sum modulo logic to find subarrays with sum divisible by K in linear time.
+"""
+
 # Count subarrays whose sum is divisible by k.
 
 # Idea (Prefix Sum % K)

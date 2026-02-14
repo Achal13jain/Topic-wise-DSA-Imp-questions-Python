@@ -1,3 +1,12 @@
+"""
+Problem: Find GCD of an array
+LeetCode: https://leetcode.com/problems/find-greatest-common-divisor-of-array/
+
+Time Complexity: O(n * log(max(arr)))
+Space Complexity: O(1)
+Why optimal: Iteratively computes GCD of current result and next element.
+"""
+
 #GCD of an array
 
 #Idea

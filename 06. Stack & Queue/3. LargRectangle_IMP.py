@@ -1,3 +1,12 @@
+"""
+Problem: Largest Rectangle in Histogram
+LeetCode: https://leetcode.com/problems/largest-rectangle-in-histogram/
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+Why optimal: Monotonic stack finds the nearest smaller element boundaries for each bar in linear time.
+"""
+
 # Given heights of histogram bars, find the largest rectangular area.
 
 # Example

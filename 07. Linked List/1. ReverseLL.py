@@ -1,3 +1,12 @@
+"""
+Problem: Reverse Linked List
+LeetCode: https://leetcode.com/problems/reverse-linked-list/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Iterative approach reverses pointers in a single pass without extra memory.
+"""
+
 # Given the head of a linked list, reverse it and return the new head.
 # 1 → 2 → 3 → 4 → None
 # ↓

@@ -1,3 +1,12 @@
+"""
+Problem: Merge Two Sorted Lists
+LeetCode: https://leetcode.com/problems/merge-two-sorted-lists/
+
+Time Complexity: O(n + m)
+Space Complexity: O(1)
+Why optimal: Merges two lists in-place by adjusting pointers, requiring no additional data structures.
+"""
+
 # Merge two sorted linked lists into one sorted list.
 
 # 🔹 Idea (Dummy Node)

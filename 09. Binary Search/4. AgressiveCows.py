@@ -1,3 +1,12 @@
+"""
+Problem: Aggressive Cows / Magnetic Force Between Two Balls
+LeetCode: https://leetcode.com/problems/magnetic-force-between-two-balls/
+
+Time Complexity: O(n log n) (Sorting) + O(n log(range)) (Binary Search)
+Space Complexity: O(1)
+Why optimal: Binary search on the answer (distance) checks feasibility in linear time.
+"""
+
 # You are given stall positions and k cows.
 # Place cows such that minimum distance between any two cows is maximized.
 

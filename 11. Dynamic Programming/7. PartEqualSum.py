@@ -1,3 +1,12 @@
+"""
+Problem: Partition Equal Subset Sum
+LeetCode: https://leetcode.com/problems/partition-equal-subset-sum/
+
+Time Complexity: O(n * sum)
+Space Complexity: O(sum)
+Why optimal: Reduces to 0/1 Knapsack/Subset Sum problem; pseudo-polynomial time.
+"""
+
 # Determine if array can be partitioned into two subsets with equal sum.
 
 # 🔹 DP Idea

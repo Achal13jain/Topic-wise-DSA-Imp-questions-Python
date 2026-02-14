@@ -1,3 +1,12 @@
+"""
+Problem: Next Greater Element
+LeetCode: https://leetcode.com/problems/next-greater-element-ii/ (Variation: Circular Array usually, here standard array)
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+Why optimal: Monotonic stack processes each element at most twice (push and pop), ensuring linear time.
+"""
+
 # Given an array, for each element, find the next greater element to its right.
 # If none exists, return -1.
 

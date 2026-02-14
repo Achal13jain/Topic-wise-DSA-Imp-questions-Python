@@ -1,3 +1,12 @@
+"""
+Problem: Count Subarrays with XOR equal to K
+LeetCode: https://www.interviewbit.com/problems/subarray-with-given-xor/
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+Why optimal: Uses a hash map to track prefix XOR frequencies, avoiding nested loops O(n^2).
+"""
+
 # Count Subarrays with XOR = K
 # You are given:
 # An array of integers

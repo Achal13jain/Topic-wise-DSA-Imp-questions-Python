@@ -1,3 +1,12 @@
+"""
+Problem: Longest Substring Without Repeating Characters
+LeetCode: https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
+Time Complexity: O(n)
+Space Complexity: O(min(m, n))
+Why optimal: Sliding window with hash set allows checking for duplicates in O(1), expanding and contracting the window efficiently.
+"""
+
 # Find the length of the longest substring with all unique characters.
 # 🔹 Idea (Sliding Window + HashSet)
 # Expand window with right pointer

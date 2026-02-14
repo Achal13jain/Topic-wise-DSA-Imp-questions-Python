@@ -1,3 +1,12 @@
+"""
+Problem: Binary Tree Traversal (Inorder, Preorder, Postorder)
+LeetCode: https://leetcode.com/problems/binary-tree-inorder-traversal/
+
+Time Complexity: O(n)
+Space Complexity: O(n) (recursion stack)
+Why optimal: DFS is the standard approach for tree traversals, visiting each node once.
+"""
+
 #Traverse a binary tree in different orders.
 # Depth-First Search (DFS) can be classified into three main types 
 # based on the order in which the nodes are visited

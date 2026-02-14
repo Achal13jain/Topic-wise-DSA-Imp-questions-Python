@@ -1,3 +1,12 @@
+"""
+Problem: Fibonacci Number
+LeetCode: https://leetcode.com/problems/fibonacci-number/
+
+Time Complexity: O(n)
+Space Complexity: O(1) (Space Optimized)
+Why optimal: Iterative approach avoids recursion stack and processes in linear time with constant space.
+"""
+
 # Find the n-th Fibonacci number:
 # F(n) = F(n-1) + F(n-2)
 

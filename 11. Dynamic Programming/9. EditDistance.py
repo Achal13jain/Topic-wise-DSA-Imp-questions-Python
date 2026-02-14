@@ -1,3 +1,12 @@
+"""
+Problem: Edit Distance
+LeetCode: https://leetcode.com/problems/edit-distance/
+
+Time Complexity: O(m * n)
+Space Complexity: O(m * n)
+Why optimal: Standard DP checks all insert/delete/replace possibilities for every prefix pair.
+"""
+
 # 🔹 Problem (Theory)
 # Convert word1 → word2 using:
 # Insert

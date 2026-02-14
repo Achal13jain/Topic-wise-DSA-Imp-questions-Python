@@ -1,3 +1,12 @@
+"""
+Problem: 0/1 Knapsack Problem
+LeetCode: N/A (GeeksForGeeks Classic)
+
+Time Complexity: O(n * W)
+Space Complexity: O(n * W)
+Why optimal: Standard DP approach solves subproblems for every item and capacity combination.
+"""
+
 # Each item can be taken once or not taken.
 # Maximize value under weight constraint.
 

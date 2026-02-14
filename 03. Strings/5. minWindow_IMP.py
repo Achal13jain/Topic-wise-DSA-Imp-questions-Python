@@ -1,3 +1,12 @@
+"""
+Problem: Minimum Window Substring
+LeetCode: https://leetcode.com/problems/minimum-window-substring/
+
+Time Complexity: O(n)
+Space Complexity: O(m)
+Why optimal: Sliding window approach finds the minimum window in a single pass of s.
+"""
+
 # #Find minimum window in s that contains all characters of t.
 
 # 🔹 Idea (Sliding Window + Frequency Map)

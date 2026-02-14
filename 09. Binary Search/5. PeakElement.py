@@ -1,3 +1,12 @@
+"""
+Problem: Find Peak Element
+LeetCode: https://leetcode.com/problems/find-peak-element/
+
+Time Complexity: O(log n)
+Space Complexity: O(1)
+Why optimal: Binary search moves towards the rising slope, guaranteeing a peak is found.
+"""
+
 # A peak element is one that is greater than its neighbors.
 # Array may have multiple peaks — return any one.
 

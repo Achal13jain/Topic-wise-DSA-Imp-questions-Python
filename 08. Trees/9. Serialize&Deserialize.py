@@ -1,3 +1,12 @@
+"""
+Problem: Serialize and Deserialize Binary Tree
+LeetCode: https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+Why optimal: Preorder traversal with null markers uniquely reconstructs the tree in linear time.
+"""
+
 # Convert tree → string → tree back.
 
 # 🔹 Idea (Preorder + Null Markers)

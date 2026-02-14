@@ -1,3 +1,12 @@
+"""
+Problem: Rotting Oranges
+LeetCode: https://leetcode.com/problems/rotting-oranges/
+
+Time Complexity: O(m * n)
+Space Complexity: O(m * n)
+Why optimal: Multi-source BFS is the most natural way to simulate the simultaneous spreading in a grid.
+"""
+
 # Given a grid:
 # 0 → empty
 # 1 → fresh orange

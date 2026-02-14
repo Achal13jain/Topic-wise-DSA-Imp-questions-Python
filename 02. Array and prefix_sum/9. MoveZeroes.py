@@ -1,3 +1,12 @@
+"""
+Problem: Move Zeroes
+LeetCode: https://leetcode.com/problems/move-zeroes/
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Why optimal: Two pointer approach minimizes writes, moving all zeroes to the end in a single pass.
+"""
+
 # Move all zeroes to the end of array while maintaining the order of non-zero elements.
 # Idea (Two Pointers)
 # Use one pointer to track position for non-zero elements.
