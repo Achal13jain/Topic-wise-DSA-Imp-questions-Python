@@ -1,0 +1,23 @@
+name: 💡 Feature Request
+description: Suggest an idea or a new problem category
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature!
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the new feature or improvement you'd like to see?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution or Implementation
+      description: Do you have any ideas on how to implement this?
+    validations:
+      required: false

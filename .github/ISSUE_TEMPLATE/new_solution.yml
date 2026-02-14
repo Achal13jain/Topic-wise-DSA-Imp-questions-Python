@@ -1,0 +1,52 @@
+name: ✨ New Solution
+description: Submit a new solution for a DSA problem
+title: "[SOLUTION] "
+labels: ["new-solution"]
+body:
+  - type: input
+    id: problem_name
+    attributes:
+      label: Problem Name
+      description: Name of the problem being solved
+      placeholder: e.g., Maximum Subarray Sum
+    validations:
+      required: true
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Basic and maths
+        - Array and prefix_sum
+        - Strings
+        - Hashing
+        - Two pointers & Sliding window
+        - Stack & Queue
+        - Linked List
+        - Trees
+        - Binary Search
+        - Greedy Problems
+        - Dynamic Programming
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: complexity
+    attributes:
+      label: Complexity Analysis
+      description: Please provide the time and space complexity.
+      value: |
+        Time Complexity: O()
+        Space Complexity: O()
+    validations:
+      required: true
+  - type: checkout
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have followed the code style guidelines
+        - label: I have added comments explaining the approach
+        - label: I have tested with edge cases
+    validations:
+      required: true

@@ -1,0 +1,42 @@
+name: 🐛 Bug Report
+description: Create a report to help us improve valid solutions
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: problem_name
+    attributes:
+      label: Problem Name
+      description: Which problem is this related to?
+      placeholder: e.g., 01. Basic and maths/LCM_GCD.py
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        1. Input used: ...
+        2. Expected output: ...
+        3. Actual output: ...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Python version, OS, etc.
+      placeholder: Python 3.9, Windows 10
+    validations:
+      required: false

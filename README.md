@@ -1,14 +1,52 @@
-# 🎓 DSA Practice Repository
+# 🎯 Python DSA Interview Prep - 80+ Problems
 
-A comprehensive collection of **Data Structures and Algorithms** problems organized by topic. This repository contains solutions to classic and interview-focused DSA questions covering fundamental to advanced concepts. Perfect for interview preparation and competitive programming.
+![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
+![Problems](https://img.shields.io/badge/Problems-80+-success)
+![Topics](https://img.shields.io/badge/Topics-11-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-### ⭐ Key Features
-- **11 Topic Categories** covering all core DSA concepts
-- **70+ Problems** with multiple approaches and optimizations
-- **Interview Focused** - Problems marked with `_IMP` are commonly asked
-- **Detailed Solutions** - Each solution includes the algorithm approach
-- **Python 3** implementation with clean, readable code
-- **Progression Path** - Recommended learning order from basics to advanced
+> **⭐ Star this repo if it helps you crack your interview!**
+
+📊 80+ curated problems | Organized topic-wise | Interview-focused patterns
+
+A comprehensive collection of **Data Structures and Algorithms** problems organized by topic. This repository contains solutions to classic and interview-focused DSA questions covering fundamental to advanced concepts.
+
+## ✅ Progress Tracker
+
+**Completion: 100% (80 / 80 problems)**
+
+| Topic                             | Easy   | Medium | Hard   | Total  |
+| --------------------------------- | ------ | ------ | ------ | ------ |
+| 01. Basic and maths               | 5      | 3      | 0      | 8      |
+| 02. Array and prefix_sum          | 6      | 9      | 2      | 17     |
+| 03. Strings                       | 3      | 5      | 1      | 9      |
+| 04. Hashing                       | 1      | 3      | 0      | 4      |
+| 05. Two pointers & Sliding window | 1      | 2      | 0      | 3      |
+| 06. Stack & Queue                 | 1      | 2      | 1      | 4      |
+| 07. Linked List                   | 2      | 3      | 0      | 5      |
+| 08. Trees                         | 3      | 5      | 2      | 10     |
+| 09. Binary Search                 | 1      | 3      | 1      | 5      |
+| 10. Greedy Problems               | 2      | 3      | 1      | 6      |
+| 11. Dynamic Programming           | 2      | 4      | 3      | 9      |
+| **Total**                         | **27** | **42** | **11** | **80** |
+
+---
+## 📌 Problem Index (Quick Navigation)
+| Problem | Topic | Difficulty | Solution |
+|--------|------|------------|----------|
+| Two Sum | Array | Easy | [View](./02.%20Array%20and%20prefix_sum/two_sum.py) |
+| Kadane's Algorithm | Array | Medium | [View](./02.%20Array%20and%20prefix_sum/kadane.py) |
+| Valid Parentheses | Stack | Easy | [View](./06.%20Stack%20&%20Queue/valid_parentheses.py) |
+| Binary Search | Binary Search | Easy | [View](./09.%20Binary%20Search/binary_search.py) |
+| Reverse Linked List | Linked List | Easy | [View](./07.%20Linked%20List/reverse_linked_list.py) |
+
+
+## 🏢 Problems Asked At
+
+These problems represent common interview patterns seen in companies such as:
+
+• Google • Amazon • Microsoft • Meta • Apple • and other tech companies
+
 
 ## 📚 Topics Covered
 
@@ -115,12 +153,17 @@ Each folder contains Python solutions organized by problem name. Problems marked
 ├── 09. Binary Search/
 ├── 10. Greedy Problems/
 ├── 11. Dynamic Programming/
-└── practice.py
+├── practice.py
 ```
 
 ## 🎯 How to Use
 
-1. **Clone the repository** - `git clone <repository-url>`
+1. **Clone the repository** 
+
+```bash
+git clone https://github.com/Achal13jain/Topic-wise-DSA-Imp-questions-Python.git
+cd Topic-wise-DSA-Imp-questions-Python
+```
 2. **Navigate to a topic folder** based on what you want to practice
 3. **Read the solution** to understand the approach and algorithm
 4. **Note the time & space complexity** (usually in function docstring or comments)
@@ -188,7 +231,7 @@ Focus on all **_IMP** problems across all topics in 2-3 weeks. They cover 80% of
 
 ## 📊 Repository Statistics
 
-- **Total Problems**: 70+
+- **Total Problems**: 80+
 - **Interview Problems**: 20+ (marked with _IMP)
 - **Topics**: 11
 - **Code Lines**: 3000+
@@ -217,6 +260,8 @@ Found an issue or want to add more solutions? Feel free to:
 2. Add or improve solutions
 3. Submit a pull request
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+
 ## 📝 License
 
 This repository is open source and available under the **MIT License** - feel free to use it for learning and interview prep.
@@ -226,8 +271,12 @@ This repository is open source and available under the **MIT License** - feel fr
 If you found this repository helpful, please consider giving it a **⭐ Star**!
 
 ---
+## 👨‍💻 Author
 
-*Last Updated: January 2026*
-*Perfect for interview prep at top tech companies (FAANG and beyond)*
+Achal Jain  
+GitHub: https://github.com/Achal13jain
 
-*Last Updated: January 2026*
+---
+*Last Updated: February 2026*
+
+*Useful for technical interview preparation and strengthening DSA fundamentals*
