@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DSA Interview Prep &middot; Topic-wise Atlas</title>
+<meta name="description" content="A topic-wise atlas of important DSA interview problems in Python - find the pattern, jump to the solution." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#15171C; --paper:#F2F3EF; --card:#FFFFFF; --line:#DEE0D9; --muted:#666B77;
+    --signal:#5468FF; --signal-soft:#E7EAFF;
+    --easy:#2F9E64; --easy-soft:#E9F7EF; --med:#C88612; --med-soft:#FFF3D8; --hard:#D94F44; --hard-soft:#FFE9E6;
+    --r:14px; --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter",system-ui,-apple-system,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  /* HERO */
+  .hero{background:var(--ink);color:var(--paper);overflow:hidden;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center;padding:84px 0 76px;}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8E93FF;margin:0 0 18px;}
+  h1{font-family:"Bricolage Grotesque","Inter",sans-serif;font-weight:800;font-size:clamp(38px,5.4vw,64px);line-height:1.02;letter-spacing:-.02em;margin:0 0 18px;}
+  h1 em{font-style:normal;color:#9AA0FF;}
+  .lede{font-size:18px;color:#C7CAD2;max-width:46ch;margin:0 0 28px;}
+  .stats{display:flex;gap:30px;flex-wrap:wrap;margin:0 0 30px;}
+  .stat .n{font-family:"JetBrains Mono",monospace;font-size:30px;font-weight:700;color:#fff;}
+  .stat .l{font-size:12px;color:#8C909C;letter-spacing:.05em;text-transform:uppercase;}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .15s,background .15s,border-color .15s;}
+  .btn-primary{background:var(--signal);color:#fff;}
+  .btn-primary:hover{transform:translateY(-2px);background:#4257f0;}
+  .btn-ghost{border:1px solid #3A3E49;color:var(--paper);}
+  .btn-ghost:hover{border-color:#6E7280;transform:translateY(-2px);}
+
+  /* HERO GRAPH SIGNATURE */
+  .graph-stage{display:flex;justify-content:center;min-height:320px;align-items:center;}
+  .graph-stage svg{width:100%;max-width:500px;height:auto;overflow:visible;}
+  .edge{stroke:#2E3240;stroke-width:1.5;opacity:.78;}
+  .node{fill:#1E212B;stroke:#363B4E;stroke-width:1.5;transform-box:fill-box;transform-origin:center;}
+  .node-core{fill:#4A5068;transform-box:fill-box;transform-origin:center;}
+  .pulse .edge{animation:edgePulse 2.6s ease-in-out infinite;}
+  .pulse .node{animation:nodePulse 2.6s ease-in-out infinite;}
+  .pulse .node-core{animation:corePulse 2.6s ease-in-out infinite;}
+  @keyframes nodePulse{
+    0%,100%{fill:#1E212B;stroke:#363B4E;filter:none;transform:scale(1);}
+    18%,36%{fill:#5468FF;stroke:#AAB1FF;filter:drop-shadow(0 0 12px rgba(84,104,255,.95));transform:scale(1.12);}
+  }
+  @keyframes corePulse{
+    0%,100%{fill:#4A5068;transform:scale(1);}
+    18%,36%{fill:#fff;transform:scale(1.24);}
+  }
+  @keyframes edgePulse{
+    0%,100%{stroke:#2E3240;stroke-width:1.5;opacity:.78;filter:none;}
+    18%,36%{stroke:#7F8CFF;stroke-width:3;opacity:1;filter:drop-shadow(0 0 9px rgba(84,104,255,.72));}
+  }
+
+  section.wrap{padding:56px 24px 64px;}
+  .hero + section.wrap{padding-top:58px;}
+  section.wrap + section.wrap{padding-top:38px;}
+  section+section{border-top:1px solid var(--line);}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin:0 0 14px;}
+  .sec-num{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--signal);font-weight:700;}
+  .sec-head h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:clamp(24px,3vw,32px);letter-spacing:-.01em;margin:0;}
+  .sec-sub{color:var(--muted);max-width:64ch;margin:0 0 44px;font-size:16px;line-height:1.75;}
+
+  /* DECISIONS */
+  .decisions{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .dec{display:flex;align-items:center;gap:18px;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;cursor:pointer;transition:border-color .18s,transform .18s,box-shadow .18s;text-align:left;width:100%;font:inherit;color:inherit;min-height:76px;}
+  .dec:hover{border-color:var(--signal);transform:translateY(-2px);box-shadow:0 8px 24px -12px rgba(84,104,255,.25);}
+  .dec .sig{font-size:14px;line-height:1.4;}
+  .dec .tech{font-family:"JetBrains Mono",monospace;font-size:11.5px;font-weight:700;color:var(--signal);background:var(--signal-soft);padding:5px 11px;border-radius:7px;white-space:nowrap;flex-shrink:0;}
+
+  /* TOOLBAR */
+  .toolbar{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:0 0 34px;}
+  .search{flex:1;min-width:260px;display:flex;align-items:center;gap:12px;background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:13px 14px 13px 20px;min-height:58px;transition:border-color .15s,box-shadow .15s;}
+  .search:focus-within{border-color:var(--signal);box-shadow:0 0 0 3px rgba(84,104,255,.12);}
+  .search input{border:0;outline:0;background:transparent;font:inherit;width:100%;color:var(--ink);}
+  .search svg{flex-shrink:0;color:var(--muted);}
+  .search-clear{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid transparent;background:#F1F2EE;cursor:pointer;color:var(--muted);font-size:18px;line-height:1;padding:0;border-radius:50%;flex-shrink:0;transition:background .12s,color .12s,border-color .12s,opacity .12s;}
+  .search-clear:hover{background:#ECEEF8;color:var(--signal);border-color:#DDE1FF;}
+  .search-clear[disabled]{opacity:.45;cursor:default;}
+  .search-clear[disabled]:hover{background:#F1F2EE;color:var(--muted);border-color:transparent;}
+  .pills{display:flex;gap:8px;flex-wrap:wrap;}
+  .pill{font:600 13px "Inter",sans-serif;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);cursor:pointer;color:var(--muted);transition:all .15s;white-space:nowrap;}
+  .pill:hover{border-color:#B0B4BC;color:var(--ink);}
+  .pill[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink);}
+  .pill.e[aria-pressed="true"]{background:var(--easy);border-color:var(--easy);color:#fff;}
+  .pill.m[aria-pressed="true"]{background:var(--med);border-color:var(--med);color:#fff;}
+  .pill.h[aria-pressed="true"]{background:var(--hard);border-color:var(--hard);color:#fff;}
+
+  /* TOPIC LIST */
+  .topics{display:flex;flex-direction:column;gap:16px;}
+  .topic{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden;transition:border-color .16s,box-shadow .16s;}
+  .topic.open{box-shadow:0 16px 40px -22px rgba(20,24,40,.3);border-color:#C0C4BA;}
+  .thead{display:grid;grid-template-columns:auto 1fr auto auto;gap:20px;align-items:center;padding:22px 24px;cursor:pointer;user-select:none;}
+  .thead:hover{background:#FAFBF8;}
+  .tnum{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;color:var(--muted);min-width:22px;}
+  .tmain h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:19px;letter-spacing:-.01em;margin:0 0 3px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .tmain p{color:var(--muted);font-size:13px;margin:0;line-height:1.5;}
+  .tcount{font-family:"JetBrains Mono",monospace;font-size:14px;color:var(--ink);font-weight:700;text-align:right;line-height:1;}
+  .tcount span{display:block;font-size:10px;color:var(--muted);font-weight:500;letter-spacing:.06em;margin-top:3px;text-transform:uppercase;}
+  .chev{width:20px;height:20px;color:var(--muted);transition:transform .22s;flex-shrink:0;}
+  .topic.open .chev{transform:rotate(180deg);}
+  .bars{display:flex;height:5px;border-radius:99px;overflow:hidden;background:#EEEFEA;margin:0 24px 4px;}
+  .bars i{display:block;height:100%;}
+  .be{background:var(--easy);}.bm{background:var(--med);}.bh{background:var(--hard);}
+
+  .problems{display:none;padding:8px 24px 24px;}
+  .topic.open .problems{display:block;}
+  .prow{display:flex;align-items:center;gap:14px;padding:13px 12px;border-top:1px solid #EFF0EC;transition:background .12s,border-color .12s;border-radius:8px;}
+  .prow:first-child{border-top:none;}
+  .prow:hover{background:#F5F6F2;}
+  .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+  .dot.e{background:var(--easy);}.dot.m{background:var(--med);}.dot.h{background:var(--hard);}
+  .pname{flex:1;font-size:14.5px;font-weight:500;}
+  .imp{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;color:var(--signal);background:var(--signal-soft);padding:2px 7px;border-radius:5px;letter-spacing:.04em;white-space:nowrap;}
+  .pdiff{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;text-transform:uppercase;min-width:70px;text-align:center;flex-shrink:0;border-radius:999px;padding:5px 9px;border:1px solid transparent;letter-spacing:.04em;}
+  .pdiff.e{color:var(--easy);background:var(--easy-soft);border-color:#B9E5CB;}
+  .pdiff.m{color:#8A5B05;background:var(--med-soft);border-color:#F1D08B;}
+  .pdiff.h{color:var(--hard);background:var(--hard-soft);border-color:#F1B5AE;}
+  .prow .arr{color:var(--muted);transition:transform .15s,color .15s;flex-shrink:0;}
+  .prow:hover .arr{transform:translateX(3px);color:var(--signal);}
+  .folder-link{margin-top:12px;padding:10px 10px 4px;font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;color:var(--signal);display:inline-flex;align-items:center;gap:6px;border-radius:8px;transition:background .12s;}
+  .folder-link:hover{background:#F0F2FF;}
+  .empty{text-align:center;color:var(--muted);padding:48px 24px;font-size:15px;}
+  #topics{padding-bottom:36px;}
+
+  /* DATA STRUCTURE CHOOSER */
+  .ds-chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px;}
+  .ds-chip{font:600 13px "Inter",sans-serif;padding:8px 15px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);cursor:pointer;color:var(--muted);transition:all .15s;white-space:nowrap;}
+  .ds-chip:hover{border-color:#B0B4BC;color:var(--ink);}
+  .ds-chip[aria-pressed="true"]{background:var(--signal);color:#fff;border-color:var(--signal);}
+  .ds-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .ds-card{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);padding:20px 20px 18px;transition:opacity .18s,border-color .18s,transform .18s,box-shadow .18s;}
+  .ds-card.dim{opacity:.22;pointer-events:none;}
+  .ds-card.hit{border-color:var(--signal);transform:translateY(-3px);box-shadow:0 14px 32px -18px rgba(84,104,255,.5);}
+  .ds-card h4{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:17px;margin:0 0 7px;}
+  .ds-card .clue{color:var(--muted);font-size:13.5px;margin:0 0 14px;min-height:40px;line-height:1.5;}
+  .ds-meta{display:flex;flex-direction:column;gap:6px;font-family:"JetBrains Mono",monospace;font-size:12px;}
+  .ds-meta .py{color:var(--signal);}
+  .ds-meta .big{color:var(--ink);font-weight:700;}
+  .ds-note{margin-top:24px;background:#FBFBF9;border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;font-size:14px;color:#3A3E48;line-height:1.75;}
+  .ds-note b{color:var(--ink);}
+  .ds-note .full{display:inline-block;margin-top:10px;font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;color:var(--signal);}
+  .ds-note .full:hover{text-decoration:underline;}
+  @media (max-width:880px){.ds-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.ds-grid{grid-template-columns:1fr;}}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:#A6AAB4;padding:58px 0 34px;margin-top:0;border-top:1px solid #242832;}
+  .foot-top{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:54px;padding-bottom:34px;border-bottom:1px solid #272B35;}
+  .foot-brand p{font-size:14px;color:#969BAA;line-height:1.65;max-width:30ch;margin:10px 0 0;}
+  .foot-brand strong{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:22px;color:#fff;}
+  .foot-col h5{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#4E5363;margin:0 0 14px;}
+  .foot-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;}
+  .foot-col li a{color:#A6AAB4;font-size:14px;transition:color .15s,transform .15s;display:inline-flex;}
+  .foot-col li a:hover{color:#fff;}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px;}
+  .foot-copy{font-size:13px;color:#4E5363;}
+  .foot-links{display:flex;gap:20px;flex-wrap:wrap;}
+  .foot-links a{font-size:13px;color:#4E5363;transition:color .15s;}
+  .foot-links a:hover{color:var(--signal);}
+  @media (max-width:880px){.foot-top{grid-template-columns:1fr 1fr;gap:32px;}.foot-brand{grid-column:1/-1;}}
+  @media (max-width:560px){.foot-top{grid-template-columns:1fr;}}
+
+  @media (max-width:880px){
+    .hero-grid{grid-template-columns:1fr;gap:34px;padding:58px 0 56px;}
+    .graph-stage{order:-1;}
+    .decisions{grid-template-columns:1fr;gap:10px;}
+    .thead{grid-template-columns:auto 1fr auto;}
+    .chev{display:none;}
+    .toolbar{gap:10px;}
+    .pills{gap:6px;}
+    .stat .n{font-size:26px;}
+    section.wrap{padding:50px 24px 58px;}
+    .hero + section.wrap{padding-top:52px;}
+    section.wrap + section.wrap{padding-top:34px;}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 18px;}
+    section.wrap{padding:46px 18px 54px;}
+    .hero + section.wrap{padding-top:48px;}
+    section.wrap + section.wrap{padding-top:32px;}
+    .decisions{grid-template-columns:1fr;}
+    .dec{flex-direction:column;align-items:flex-start;gap:10px;}
+    .dec .tech{align-self:flex-start;}
+    .toolbar{align-items:stretch;}
+    .search{min-width:100%;width:100%;}
+    .pills{width:100%;}
+    .pill{flex:1;text-align:center;}
+    .thead{grid-template-columns:auto 1fr;gap:14px;padding:20px 18px;}
+    .tcount{grid-column:2;text-align:left;}
+    .bars{margin:0 18px 4px;}
+    .problems{padding:8px 18px 22px;}
+    .prow{align-items:flex-start;flex-wrap:wrap;gap:10px 12px;}
+    .pname{min-width:calc(100% - 28px);}
+    .pdiff{margin-left:28px;}
+  }
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Python &middot; Topic-wise &middot; Interview-focused</p>
+        <h1>The pattern is the<br/><em>real</em> problem.</h1>
+        <p class="lede">A curated set of important DSA interview questions, grouped by the technique each one teaches. Find the pattern, open the solution, learn the shape.</p>
+        <div class="stats" id="stats"></div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/Achal13jain/Topic-wise-DSA-Imp-questions-Python" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="btn btn-ghost" href="#patterns">Which pattern do I use?</a>
+        </div>
+      </div>
+      <div class="graph-stage">
+        <svg viewBox="0 0 480 320" class="pulse" role="img" aria-label="Animated graph traversal">
+          <g>
+            <line class="edge" x1="60" y1="160" x2="160" y2="90"/><line class="edge" x1="60" y1="160" x2="160" y2="230"/>
+            <line class="edge" x1="160" y1="90" x2="260" y2="50"/><line class="edge" x1="160" y1="90" x2="260" y2="150"/>
+            <line class="edge" x1="160" y1="230" x2="260" y2="150"/><line class="edge" x1="160" y1="230" x2="260" y2="250"/>
+            <line class="edge" x1="260" y1="50" x2="360" y2="100"/><line class="edge" x1="260" y1="150" x2="360" y2="100"/>
+            <line class="edge" x1="260" y1="150" x2="360" y2="200"/><line class="edge" x1="260" y1="250" x2="360" y2="200"/>
+            <line class="edge" x1="360" y1="100" x2="440" y2="60"/><line class="edge" x1="360" y1="100" x2="440" y2="160"/>
+            <line class="edge" x1="360" y1="200" x2="440" y2="160"/><line class="edge" x1="360" y1="200" x2="440" y2="260"/>
+          </g>
+          <g id="nodes"></g>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <section id="patterns" class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Which pattern do I use?</h2></div>
+    <p class="sec-sub">Read the signal in a problem, then reach for the technique. Tap any row to filter the topics below.</p>
+    <div class="decisions" id="decisions"></div>
+  </section>
+
+  <section id="datastructures" class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Which data structure?</h2></div>
+    <p class="sec-sub">Patterns give you the plan; structures are the tools. Pick what you need to be fast and the matching structures light up.</p>
+    <div class="ds-chips" id="dsChips"></div>
+    <div class="ds-grid" id="dsGrid"></div>
+    <div class="ds-note">
+      <b>Composite structures</b> - some problems need two working together: <b>LRU cache</b> = hash map + doubly linked list &middot; <b>streaming median</b> = two heaps &middot; <b>Dijkstra</b> = graph + min-heap &middot; <b>sliding-window max</b> = monotonic deque.
+      <br/><a class="full" href="./DATA_STRUCTURES.md">Read the full guide &rarr;</a>
+    </div>
+  </section>
+
+  <section id="topics" class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Browse every problem</h2></div>
+    <p class="sec-sub">Click a topic to expand its problems. Each links straight to the solution on GitHub. Difficulty is color-coded: <b style="color:var(--easy)">easy</b>, <b style="color:var(--med)">medium</b>, <b style="color:var(--hard)">hard</b>. <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--signal)">IMP</span> marks priority problems.</p>
+    <div class="toolbar">
+      <label class="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="q" type="text" placeholder="Search a problem or topic..." autocomplete="off" />
+        <button id="qClear" class="search-clear" aria-label="Clear search" title="Clear search" disabled>&times;</button>
+      </label>
+      <div class="pills" id="pills">
+        <button class="pill" data-f="all" aria-pressed="true">All</button>
+        <button class="pill e" data-f="e" aria-pressed="false">Easy</button>
+        <button class="pill m" data-f="m" aria-pressed="false">Medium</button>
+        <button class="pill h" data-f="h" aria-pressed="false">Hard</button>
+        <button class="pill" data-f="imp" aria-pressed="false">IMP only</button>
+      </div>
+    </div>
+    <div class="topics" id="list"></div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <strong>DSA Interview Prep</strong>
+          <p>98 Python problems across 15 topics, grouped for interview prep and quick pattern recall.</p>
+        </div>
+        <div class="foot-col">
+          <h5>Study</h5>
+          <ul>
+            <li><a href="./PATTERNS.md" target="_blank" rel="noopener">Pattern Cheat-Sheet</a></li>
+            <li><a href="./DATA_STRUCTURES.md" target="_blank" rel="noopener">Data Structure Chooser</a></li>
+            <li><a href="#topics">Browse all problems</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h5>Repository</h5>
+          <ul>
+            <li><a href="https://github.com/Achal13jain/Topic-wise-DSA-Imp-questions-Python" target="_blank" rel="noopener">View on GitHub &rarr;</a></li>
+            <li><a href="./README.md" target="_blank" rel="noopener">README</a></li>
+            <li><a href="./CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span class="foot-copy">&copy; 2026 Achal Jain &middot; MIT License </span>
+        <div class="foot-links">
+          <a href="https://github.com/Achal13jain/Topic-wise-DSA-Imp-questions-Python/issues" target="_blank" rel="noopener">Report an issue</a>
+          <a href="./LICENSE" target="_blank" rel="noopener">License</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  const TREE = "https://github.com/Achal13jain/Topic-wise-DSA-Imp-questions-Python/tree/main/";
+  const BLOB = "https://github.com/Achal13jain/Topic-wise-DSA-Imp-questions-Python/blob/main/";
+
+  // p = [display name, filename, difficulty(e|m|h), IMP?(0|1)]
+  const TOPICS = [
+    {num:"01", name:"Basics & Maths", folder:"01. Basic and maths", blurb:"GCD/LCM, XOR tricks, modular power, primes.", p:[
+      ["LCM & GCD","1. LCM&GCD.py","e",0],
+      ["GCD of an Array","2. GCD_arr.py","e",0],
+      ["XOR Properties","3. XOR_prop.py","e",0],
+      ["Count Subarrays with XOR = K","4. cnt_sub_XOR.py","m",0],
+      ["Power of Two","5. pow_of_2.py","e",0],
+      ["Valid Perfect Square","6. perf_squr_IMP.py","e",1],
+      ["Modular Exponentiation","7. mod_exp_IMP.py","m",1],
+      ["Sieve of Eratosthenes","8. find_primes.py","m",0],
+    ]},
+    {num:"02", name:"Arrays & Prefix Sum", folder:"02. Array and prefix_sum", blurb:"Two Sum, Kadane, prefix sums, rotations.", p:[
+      ["Two Sum","1. TwoSum.py","e",0],
+      ["Maximum Subarray (Kadane)","2. MaxSumSubArr_IMP.py","m",1],
+      ["Prefix Sum","2.5. PrefixSum_IMP.py","e",1],
+      ["Minimum Size Subarray Sum","2.75 MinSubSum.py","m",0],
+      ["Subarray Sum Equals K","3. SubArrSum_IMP.py","m",1],
+      ["Subarray Sums Divisible by K","4. SubSumDiv_IMP.py","m",1],
+      ["Majority Element","5. MajElemet.py","e",0],
+      ["Product of Array Except Self","6. ProdExcepSelf.py","m",0],
+      ["Find the Duplicate Number","7. DuplicateNum_IMP.py","m",1],
+      ["Merge Sorted Array","8. MergeSorted_IMP.py","e",1],
+      ["Move Zeroes","9. MoveZeroes.py","e",0],
+      ["3Sum","10. 3Sum.py","m",0],
+      ["Container With Most Water","11. MaxWater_IMP.py","m",1],
+      ["Print All Subarrays","12. AllSubarrPrint.py","e",0],
+      ["Equilibrium Index","13. EquilibiriumIndex.py","e",0],
+      ["Check if Sorted & Rotated","14. CheckSortedAndRotated.py","e",0],
+      ["Min Operations to Zero","15. MinOptoZero.py","m",0],
+    ]},
+    {num:"03", name:"Strings", folder:"03. Strings", blurb:"Windows, palindromes, anagrams, matching.", p:[
+      ["Valid Parentheses","1. validParanthesis.py","e",0],
+      ["Longest Substring Without Repeating","2. longestSubstring_IMP.py","m",1],
+      ["First Non-Repeating Character","3. firstNonrepeat.py","e",0],
+      ["Group Anagrams","4. groupAnagrams.py","m",0],
+      ["Minimum Window Substring","5. minWindow_IMP.py","h",1],
+      ["Longest Palindromic Substring","6. longestPalindrome_IMP.py","m",1],
+      ["Palindrome Check","7. plaindromeCheck.py","e",0],
+      ["Sum of Beauty of Substrings","8. SumOfBeauty.py","m",0],
+      ["Can Form Palindrome","9. CanFormPalindrome.py","e",0],
+    ]},
+    {num:"04", name:"Hashing", folder:"04. Hashing", blurb:"Frequency maps, dedup, structure design.", p:[
+      ["Frequency Count","1. FreqCount.py","e",0],
+      ["Longest Consecutive Sequence","2. LCS_IMP.py","m",1],
+      ["Design a Data Structure","3. designDS.py","m",0],
+      ["Count Distinct in Window","4. CountDistinct_IMP.py","m",1],
+    ]},
+    {num:"05", name:"Two Pointers & Sliding Window", folder:"05. Two pointers & Sliding window", blurb:"Converging pointers, variable windows.", p:[
+      ["Two Sum II (Sorted)","1. TwoSumSorted.py","m",0],
+      ["Sliding Window Maximum","2. MaxEleminWindow_IMP.py","h",1],
+      ["Max Consecutive Ones","3. MaxConsecOnes.py","e",0],
+    ]},
+    {num:"06", name:"Stack & Queue", folder:"06. Stack & Queue", blurb:"Monotonic stack, next greater, BFS queue.", p:[
+      ["Next Greater Element","1. NextGreater_IMP.py","m",1],
+      ["Min Stack","2. MinStack.py","m",0],
+      ["Largest Rectangle in Histogram","3. LargRectangle_IMP.py","h",1],
+      ["Rotting Oranges","4. RottenOranges.py","m",0],
+    ]},
+    {num:"07", name:"Linked List", folder:"07. Linked List", blurb:"Reversal, cycle, merge, slow/fast pointers.", p:[
+      ["Reverse Linked List","1. ReverseLL.py","e",0],
+      ["Detect Cycle","2. DetectLoop.py","m",0],
+      ["Merge Two Sorted Lists","3. MergeSortedLL.py","e",0],
+      ["Middle of the List","4. MiddleEle.py","e",0],
+      ["Remove Nth Node From End","5. RemoveNthNode.py","m",0],
+    ]},
+    {num:"08", name:"Trees", folder:"08. Trees", blurb:"Traversals, LCA, diameter, serialize.", p:[
+      ["Tree Traversals (In/Pre/Post)","1. TreeTraversal.py","e",0],
+      ["Maximum Depth of Tree","2. TreeHeight.py","e",0],
+      ["Diameter of Binary Tree","3. DiameterTree.py","e",0],
+      ["Level Order Traversal","4. LevelOrderTraversal.py","m",0],
+      ["Lowest Common Ancestor","5. LCA.py","m",0],
+      ["Path Sum","6. PathSum.py","e",0],
+      ["Binary Tree Maximum Path Sum","7. MaxSumPath.py","h",1],
+      ["Subtree of Another Tree","8. SubTreeOfTree.py","e",0],
+      ["Serialize & Deserialize","9. Serialize&Deserialize.py","h",1],
+    ]},
+    {num:"09", name:"Binary Search", folder:"09. Binary Search", blurb:"Search space, rotated array, allocation.", p:[
+      ["Binary Search","1. BinarySearch.py","e",0],
+      ["Search in Rotated Sorted Array","2. Sorted&RotatedSearch.py","m",0],
+      ["Allocate Minimum Pages","3. AllocateMinimumPage.py","h",1],
+      ["Aggressive Cows","4. AgressiveCows.py","h",1],
+      ["Find Peak Element","5. PeakElement.py","m",0],
+    ]},
+    {num:"10", name:"Greedy", folder:"10. Greedy Problems", blurb:"Intervals, scheduling, gas station.", p:[
+      ["Monster Battle","1. MonsterBattle_IMP.py","m",1],
+      ["Minimum Platforms","2. MinimumPlatforms_IMP.py","m",1],
+      ["Job Sequencing","3. JobSequencing.py","m",0],
+      ["Merge Intervals","4. MergeInterval.py","m",0],
+      ["Gas Station","5. GasStation.py","m",0],
+      ["Fractional Knapsack","6. FractionalKnapsack.py","e",0],
+    ]},
+    {num:"11", name:"Dynamic Programming", folder:"11. Dynamic Programming", blurb:"Knapsack, LIS/LCS, grid, edit distance.", p:[
+      ["Fibonacci (DP)","1. FibonacciDP_IMP.py","e",1],
+      ["Climbing Stairs","2. ClimbingStairs.py","e",0],
+      ["Coin Change","3. CoinChange.py","m",0],
+      ["Longest Increasing Subsequence","4. LIS.py","m",0],
+      ["Longest Common Subsequence","5. LCS.py","m",0],
+      ["0/1 Knapsack","6. 0 1 Knapsack.py","m",0],
+      ["Partition Equal Subset Sum","7. PartEqualSum.py","m",0],
+      ["Maximum Product Subarray","8. MaxProdSubarr.py","m",0],
+      ["Edit Distance","9. EditDistance.py","h",1],
+      ["Unique Paths (Grid DP)","10. UniquePaths.py","m",0],
+      ["House Robber","11. HouseRobber.py","m",0],
+    ]},
+    {num:"12", name:"Graphs", folder:"12. Graphs", blurb:"BFS/DFS, topological sort, Dijkstra, union-find.", p:[
+      ["BFS Traversal","1. BFS.py","e",0],
+      ["DFS Traversal","2. DFS.py","e",0],
+      ["Number of Islands","3. NumberOfIslands.py","m",0],
+      ["Clone Graph","4. CloneGraph.py","m",0],
+      ["Course Schedule (Topo Sort)","5. CourseSchedule.py","m",1],
+      ["Network Delay Time (Dijkstra)","6. NetworkDelayTime_IMP.py","m",1],
+      ["Number of Provinces (Union-Find)","7. NumberOfProvinces.py","m",0],
+    ]},
+    {num:"13", name:"Heap & Priority Queue", folder:"13. Heap and Priority Queue", blurb:"Top-K, merge-K, running median.", p:[
+      ["Kth Largest Element","1. KthLargest.py","m",0],
+      ["Top K Frequent Elements","2. TopKFrequent.py","m",0],
+      ["Merge K Sorted Lists","3. MergeKSortedLists_IMP.py","h",1],
+      ["Find Median from Data Stream","4. MedianFromDataStream_IMP.py","h",1],
+    ]},
+    {num:"14", name:"Backtracking", folder:"14. Backtracking", blurb:"Subsets, permutations, N-Queens, grid search.", p:[
+      ["Subsets","1. Subsets.py","m",0],
+      ["Permutations","2. Permutations.py","m",0],
+      ["Combination Sum","3. CombinationSum.py","m",0],
+      ["N-Queens","4. NQueens_IMP.py","h",1],
+      ["Word Search","5. WordSearch.py","m",0],
+    ]},
+    {num:"15", name:"Trie", folder:"15. Trie", blurb:"Prefix tree: insert, search, prefix match.", p:[
+      ["Implement Trie (Prefix Tree)","1. ImplementTrie.py","m",0],
+    ]},
+  ];
+
+  const DECISIONS = [
+    {sig:"Sorted array, find a pair summing to target", tech:"Two Pointers", t:"two pointers"},
+    {sig:"Longest/shortest window under a constraint", tech:"Sliding Window", t:"sliding window"},
+    {sig:"Repeated range / subarray sum queries", tech:"Prefix Sum", t:"prefix"},
+    {sig:"Need next-greater or running min/max", tech:"Monotonic Stack", t:"stack"},
+    {sig:"Group by frequency or need fast lookup", tech:"Hashing", t:"hashing"},
+    {sig:"Shortest path in an unweighted grid", tech:"BFS", t:"graph"},
+    {sig:"Order tasks / detect a dependency cycle", tech:"Topological Sort", t:"course schedule"},
+    {sig:"Group connected items / provinces", tech:"Union-Find", t:"provinces"},
+    {sig:"Top K / K smallest / streaming median", tech:"Heap", t:"heap"},
+    {sig:"All subsets, permutations, combinations", tech:"Backtracking", t:"backtracking"},
+    {sig:"Prefix / autocomplete on strings", tech:"Trie", t:"trie"},
+    {sig:"Search a sorted / monotonic answer space", tech:"Binary Search", t:"binary search"},
+    {sig:"Overlapping subproblems + an optimum", tech:"Dynamic Programming", t:"dynamic"},
+    {sig:"Reorder nodes or detect a loop", tech:"Slow/Fast Pointers", t:"linked"},
+  ];
+
+  // hero stats (computed)
+  const allProblems = TOPICS.flatMap(t=>t.p);
+  document.getElementById("stats").innerHTML = `
+    <div class="stat"><div class="n">${allProblems.length}</div><div class="l">Problems</div></div>
+    <div class="stat"><div class="n">${TOPICS.length}</div><div class="l">Topics</div></div>
+    <div class="stat"><div class="n">${allProblems.filter(p=>p[3]).length}</div><div class="l">IMP picks</div></div>`;
+
+  // hero graph
+  const NODES=[{x:60,y:160},{x:160,y:90},{x:160,y:230},{x:260,y:50},{x:260,y:150},{x:260,y:250},{x:360,y:100},{x:360,y:200},{x:440,y:60},{x:440,y:160},{x:440,y:260}];
+  const NODE_DELAYS=[0,.24,1.42,.48,1.18,1.62,.72,1.86,.96,2.12,2.36];
+  const EDGE_DELAYS=[.12,1.54,.36,.98,1.30,1.70,.60,.84,1.78,1.82,.84,2.02,1.98,2.24];
+  document.getElementById("nodes").innerHTML = NODES.map((n,i)=>{
+    const delay=`${NODE_DELAYS[i]}s`;
+    return `<g><circle class="node" cx="${n.x}" cy="${n.y}" r="13" style="animation-delay:${delay}"/><circle class="node-core" cx="${n.x}" cy="${n.y}" r="4" style="animation-delay:${delay}"/></g>`;
+  }).join("");
+  document.querySelectorAll(".edge").forEach((edge,i)=>{edge.style.animationDelay=`${EDGE_DELAYS[i]}s`;});
+
+  // decisions
+  const q=document.getElementById("q");
+  document.getElementById("decisions").innerHTML = DECISIONS.map(d=>`<button class="dec" data-t="${d.t}"><span class="sig">${d.sig}</span><span class="tech">${d.tech}</span></button>`).join("");
+  document.querySelectorAll(".dec").forEach(b=>b.addEventListener("click",()=>{q.value=b.dataset.t;activeDiff="all";syncPills();syncClear();render();document.getElementById("topics").scrollIntoView({behavior:"smooth"});}));
+
+  // data structure chooser
+  const DS = [
+    {n:"Hash Map", clue:"key → value, dedup, 'seen before', caches", py:"dict / defaultdict", big:"lookup O(1) avg", need:["lookup","count"]},
+    {n:"Hash Set", clue:"uniqueness, fast membership tests", py:"set", big:"in → O(1) avg", need:["lookup"]},
+    {n:"Counter", clue:"frequency, most common, anagrams", py:"collections.Counter", big:"tally O(1)", need:["count"]},
+    {n:"Stack", clue:"next greater, parentheses, undo, DFS", py:"list (append/pop)", big:"push/pop O(1)", need:["ends"]},
+    {n:"Queue / Deque", clue:"BFS, sliding window, both ends", py:"collections.deque", big:"ends O(1)", need:["ends"]},
+    {n:"Heap", clue:"top-K, repeated min/max, median", py:"heapq", big:"push/pop O(log n)", need:["minmax"]},
+    {n:"Sorted / BST", clue:"kept sorted, floor/ceil, kth smallest", py:"SortedList / bisect", big:"ops O(log n)", need:["sorted","minmax"]},
+    {n:"Trie", clue:"prefix, autocomplete, dictionary words", py:"dict-of-dicts", big:"insert/search O(L)", need:["prefix"]},
+    {n:"Union-Find", clue:"connected groups, merge, count islands", py:"parent[] + rank[]", big:"~O(1) amortized", need:["grouping"]},
+    {n:"Graph", clue:"paths, networks, relationships", py:"dict[node] → list", big:"BFS/DFS O(V+E)", need:["graph"]},
+    {n:"Array / List", clue:"index access, contiguous data", py:"list", big:"index O(1), search O(n)", need:["lookup"]},
+    {n:"Linked List", clue:"O(1) insert/delete at a known node", py:"Node class", big:"node op O(1)", need:["ends"]},
+  ];
+  const DSNEEDS = [["all","Show all"],["lookup","Fast lookup"],["count","Count frequency"],["minmax","Min / Max / Top-K"],["ends","LIFO / FIFO / ends"],["sorted","Keep sorted"],["prefix","Prefix match"],["grouping","Grouping"],["graph","Paths / relations"]];
+  let dsActive="all";
+  const dsGrid=document.getElementById("dsGrid"), dsChips=document.getElementById("dsChips");
+  dsChips.innerHTML = DSNEEDS.map(([k,l])=>`<button class="ds-chip" data-k="${k}" aria-pressed="${k==='all'}">${l}</button>`).join("");
+  function renderDS(){
+    dsGrid.innerHTML = DS.map(d=>{
+      const hit = dsActive!=="all" && d.need.includes(dsActive);
+      const dim = dsActive!=="all" && !d.need.includes(dsActive);
+      return `<div class="ds-card ${hit?'hit':''} ${dim?'dim':''}"><h4>${d.n}</h4><p class="clue">${d.clue}</p><div class="ds-meta"><span class="py">${d.py}</span><span class="big">${d.big}</span></div></div>`;
+    }).join("");
+  }
+  dsChips.querySelectorAll(".ds-chip").forEach(c=>c.addEventListener("click",()=>{dsActive=c.dataset.k;dsChips.querySelectorAll(".ds-chip").forEach(x=>x.setAttribute("aria-pressed",x.dataset.k===dsActive));renderDS();}));
+  renderDS();
+
+  // list
+  const list=document.getElementById("list");
+  let activeDiff="all";
+  const DIFFLABEL={e:"Easy",m:"Medium",h:"Hard"};
+
+  function probPassesDiff(p){return activeDiff==="all" || (activeDiff==="imp"? !!p[3] : p[2]===activeDiff);}
+  function topicTextMatch(t,term){return !term || t.name.toLowerCase().includes(term) || t.blurb.toLowerCase().includes(term);}
+
+  function render(){
+    const term=q.value.trim().toLowerCase();
+    const filtering = term!=="" || activeDiff!=="all";
+    let html="", shown=0;
+
+    TOPICS.forEach(t=>{
+      const topicHit = topicTextMatch(t,term);
+      const probs = t.p.filter(p=>{
+        const textOk = !term || topicHit || p[0].toLowerCase().includes(term);
+        return textOk && probPassesDiff(p);
+      });
+      if(probs.length===0) return;
+      shown++;
+
+      const e=t.p.filter(p=>p[2]==="e").length, m=t.p.filter(p=>p[2]==="m").length, h=t.p.filter(p=>p[2]==="h").length, tot=t.p.length;
+      const pe=e/tot*100, pm=m/tot*100, ph=h/tot*100;
+      const folderHref=TREE+encodeURIComponent(t.folder);
+      const open = filtering ? "open" : "";
+
+      const rows = probs.map(p=>{
+        const href=BLOB+encodeURIComponent(t.folder)+"/"+encodeURIComponent(p[1]);
+        return `<a class="prow" href="${href}" target="_blank" rel="noopener">
+          <span class="dot ${p[2]}"></span>
+          <span class="pname">${p[0]}</span>
+          ${p[3]?'<span class="imp">IMP</span>':''}
+          <span class="pdiff ${p[2]}">${DIFFLABEL[p[2]]}</span>
+          <span class="arr">&rarr;</span>
+        </a>`;
+      }).join("");
+
+      html += `<div class="topic ${open}">
+        <div class="thead" role="button" tabindex="0">
+          <span class="tnum">${t.num}</span>
+          <div class="tmain"><h3>${t.name}</h3><p>${t.blurb}</p></div>
+          <div class="tcount">${tot}<span>problems</span></div>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+        <div class="bars"><i class="be" style="width:${pe}%"></i><i class="bm" style="width:${pm}%"></i><i class="bh" style="width:${ph}%"></i></div>
+        <div class="problems">
+          ${rows}
+          <a class="folder-link" href="${folderHref}" target="_blank" rel="noopener">Open full folder on GitHub &rarr;</a>
+        </div>
+      </div>`;
+    });
+
+    list.innerHTML = shown ? html : `<div class="empty">No problems match "<b>${q.value}</b>". Try clearing the filter.</div>`;
+
+    list.querySelectorAll(".thead").forEach(h=>{
+      const toggle=()=>h.closest(".topic").classList.toggle("open");
+      h.addEventListener("click",toggle);
+      h.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();toggle();}});
+    });
+  }
+
+  // clear button
+  const qClear=document.getElementById("qClear");
+  function syncClear(){qClear.disabled=!q.value;}
+  q.addEventListener("input",()=>{syncClear();render();});
+  qClear.addEventListener("click",()=>{if(!q.value) return;q.value="";syncClear();render();q.focus();});
+  syncClear();
+
+  function syncPills(){document.querySelectorAll(".pill").forEach(x=>x.setAttribute("aria-pressed", x.dataset.f===activeDiff));}
+  document.querySelectorAll(".pill").forEach(p=>p.addEventListener("click",()=>{activeDiff=p.dataset.f;syncPills();render();}));
+
+  render();
+</script>
+</body>
+</html>

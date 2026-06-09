@@ -1,282 +1,194 @@
-# 🎯 Python DSA Interview Prep - 80+ Problems
+# Python DSA Interview Prep
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
-![Problems](https://img.shields.io/badge/Problems-80+-success)
-![Topics](https://img.shields.io/badge/Topics-11-orange)
+![Problems](https://img.shields.io/badge/Problems-98-success)
+![Topics](https://img.shields.io/badge/Topics-15-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 > **⭐ Star this repo if it helps you crack your interview!**
 
-📊 80+ curated problems | Organized topic-wise | Interview-focused patterns
+98 curated problems · 15 topics · Interview-focused patterns · Python 3
 
-A comprehensive collection of **Data Structures and Algorithms** problems organized by topic. This repository contains solutions to classic and interview-focused DSA questions covering fundamental to advanced concepts.
+---
+
+## 📖 Guides
+
+| Resource | Purpose |
+|----------|---------|
+| [🌐 Visual Index](https://achal13jain.github.io/Topic-wise-DSA-Imp-questions-Python/) | Browse all problems in a filterable UI (enable GitHub Pages in repo Settings) |
+| [PATTERNS.md](./PATTERNS.md) | Signal → technique cheat-sheet — "which pattern do I use?" |
+| [DATA_STRUCTURES.md](./DATA_STRUCTURES.md) | Requirement → data-structure chooser |
+
+---
 
 ## ✅ Progress Tracker
 
-**Completion: 100% (80 / 80 problems)**
+**Completion: 100% (98 / 98 problems)**
 
-| Topic                             | Easy   | Medium | Hard   | Total  |
-| --------------------------------- | ------ | ------ | ------ | ------ |
-| 01. Basic and maths               | 5      | 3      | 0      | 8      |
-| 02. Array and prefix_sum          | 6      | 9      | 2      | 17     |
-| 03. Strings                       | 3      | 5      | 1      | 9      |
-| 04. Hashing                       | 1      | 3      | 0      | 4      |
-| 05. Two pointers & Sliding window | 1      | 2      | 0      | 3      |
-| 06. Stack & Queue                 | 1      | 2      | 1      | 4      |
-| 07. Linked List                   | 2      | 3      | 0      | 5      |
-| 08. Trees                         | 3      | 5      | 2      | 10     |
-| 09. Binary Search                 | 1      | 3      | 1      | 5      |
-| 10. Greedy Problems               | 2      | 3      | 1      | 6      |
-| 11. Dynamic Programming           | 2      | 4      | 3      | 9      |
-| **Total**                         | **27** | **42** | **11** | **80** |
+| # | Topic | Easy | Medium | Hard | Total |
+|---|-------|------|--------|------|-------|
+| 01 | Basic and Maths | 5 | 3 | 0 | 8 |
+| 02 | Array and Prefix Sum | 8 | 9 | 0 | 17 |
+| 03 | Strings | 4 | 4 | 1 | 9 |
+| 04 | Hashing | 1 | 3 | 0 | 4 |
+| 05 | Two Pointers & Sliding Window | 1 | 1 | 1 | 3 |
+| 06 | Stack & Queue | 0 | 3 | 1 | 4 |
+| 07 | Linked List | 3 | 2 | 0 | 5 |
+| 08 | Trees | 5 | 2 | 2 | 9 |
+| 09 | Binary Search | 1 | 2 | 2 | 5 |
+| 10 | Greedy Problems | 1 | 5 | 0 | 6 |
+| 11 | Dynamic Programming | 2 | 8 | 1 | 11 |
+| 12 | Graphs | 2 | 5 | 0 | 7 |
+| 13 | Heap & Priority Queue | 0 | 2 | 2 | 4 |
+| 14 | Backtracking | 0 | 4 | 1 | 5 |
+| 15 | Trie | 0 | 1 | 0 | 1 |
+| | **Total** | **33** | **54** | **11** | **98** |
+
+> **Note:** TreeNode.py in the Trees folder is a shared helper class, not a problem.  
+> Counts verified programmatically: 98 solution files across 15 topic folders.
 
 ---
-## 📌 Problem Index (Quick Navigation)
-| Problem | Topic | Difficulty | Solution |
-|--------|------|------------|----------|
-| Two Sum | Array | Easy | [View](./02.%20Array%20and%20prefix_sum/1.%20TwoSum.py) |
-| Kadane's Algorithm | Array | Medium | [View](./02.%20Array%20and%20prefix_sum/2.%20MaxSumSubArr_IMP.py) |
-| Valid Parentheses | Stack (Strings) | Easy | [View](./03.%20Strings/1.%20validParanthesis.py) |
-| Binary Search | Binary Search | Easy | [View](./09.%20Binary%20Search/1.%20BinarySearch.py) |
-| Reverse Linked List | Linked List | Easy | [View](./07.%20Linked%20List/1.%20ReverseLL.py) |
-
-
-## 🏢 Problems Asked At
-
-These problems represent common interview patterns seen in companies such as:
-
-• Google • Amazon • Microsoft • Meta • Apple • and other tech companies
-
 
 ## 📚 Topics Covered
 
-### 1. **Basic and Maths** 
-Core mathematical concepts and number theory problems
-- LCM & GCD calculations
-- XOR properties and operations
-- Power and modular exponentiation
-- Prime number finding
-- Perfect squares
+### 1. Basic and Maths
+LCM & GCD · XOR properties · Power and modular exponentiation · Sieve of Eratosthenes · Perfect squares
 
-### 2. **Array and Prefix Sum**
-Array manipulation and prefix sum techniques
-- Two Sum and 3Sum problems
-- Maximum subarray problems
-- Prefix sum optimization
-- Array rotation and equilibrium
-- Product of array elements
+### 2. Array and Prefix Sum
+Two Sum · 3Sum · Kadane's (max subarray) · Prefix sum · Product of array except self · Merge sorted arrays · Move zeroes
 
-### 3. **Strings**
-String manipulation and pattern matching
-- Parenthesis validation
-- Substring problems (longest, minimum window)
-- Palindrome detection and formation
-- Anagram grouping
-- Character frequency analysis
+### 3. Strings
+Valid parentheses · Longest substring without repeating · Minimum window substring · Longest palindromic substring · Group anagrams
 
-### 4. **Hashing**
-Hash-based data structures and techniques
-- Frequency counting
-- Distinct element counting
-- Custom data structure design
-- Hash-based LCS
+### 4. Hashing
+Frequency counting · Longest common subsequence (hash) · Custom data structure design · Count distinct elements in window
 
-### 5. **Two Pointers & Sliding Window**
-Efficient pointer and window techniques
-- Two sum with sorted arrays
-- Maximum elements in sliding window
-- Consecutive ones and window operations
+### 5. Two Pointers & Sliding Window
+Two sum (sorted) · Max element in sliding window · Maximum consecutive ones
 
-### 6. **Stack & Queue**
-Stack and queue-based problems
-- Next greater element
-- Minimum stack operations
-- Largest rectangle in histogram
-- Rotten oranges (BFS with queue)
+### 6. Stack & Queue
+Next greater element · Min stack · Largest rectangle in histogram · Rotten Oranges (multi-source BFS)
 
-### 7. **Linked List**
-Linked list operations and algorithms
-- Linked list reversal
-- Loop detection
-- Merge sorted lists
-- Middle element and node removal
+### 7. Linked List
+Reverse · Loop detection (Floyd's) · Merge sorted lists · Middle element · Remove nth from end
 
-### 8. **Trees**
-Tree traversal and tree-based problems
-- In-order, Pre-order, Post-order traversals
-- Level order traversal
-- Tree height and diameter
-- Lowest Common Ancestor (LCA)
-- Path sum and maximum path
-- Serialize and deserialize
+### 8. Trees
+In/Pre/Post-order traversal · Level-order · Height · Diameter · LCA · Path sum · Max path sum · Subtree check · Serialize & Deserialize
 
-### 9. **Binary Search**
-Binary search and search space optimization
-- Standard binary search
-- Sorted and rotated array search
-- Peak element finding
-- Aggressive cows and page allocation problems
+### 9. Binary Search
+Standard binary search · Search in rotated sorted array · Book allocation · Aggressive cows · Peak element
 
-### 10. **Greedy Problems**
-Greedy algorithm applications
-- Monster battle strategy
-- Minimum platforms required
-- Job sequencing
-- Merge intervals
-- Gas station
-- Fractional knapsack
+### 10. Greedy Problems
+Monster battle · Minimum platforms · Job sequencing · Merge intervals · Gas station · Fractional knapsack
 
-### 11. **Dynamic Programming**
-Dynamic programming techniques and optimization
-- Fibonacci and climbing stairs
-- Coin change problem
-- Longest Increasing Subsequence (LIS)
-- Longest Common Subsequence (LCS)
-- 0/1 Knapsack
-- Partition equal sum subset
-- Maximum product subarray
-- Edit distance
+### 11. Dynamic Programming
+Fibonacci · Climbing stairs · Coin change · LIS · LCS · 0/1 Knapsack · Partition equal sum · Max product subarray · Edit distance · Unique paths · House robber
 
-## 🗂️ Repository Structure
+### 12. Graphs
+BFS template · DFS (recursive + iterative) · Number of Islands · Clone Graph · Course Schedule (topological sort) · Network Delay Time (Dijkstra) · Number of Provinces (Union-Find)
 
-Each folder contains Python solutions organized by problem name. Problems marked with `_IMP` suffix indicate important interview questions.
+### 13. Heap & Priority Queue
+Kth largest element · Top K frequent elements · Merge K sorted lists · Find median from data stream
 
-```
-├── 01. Basic and maths/
-├── 02. Array and prefix_sum/
-├── 03. Strings/
-├── 04. Hashing/
-├── 05. Two pointers & Sliding window/
-├── 06. Stack & Queue/
-├── 07. Linked List/
-├── 08. Trees/
-├── 09. Binary Search/
-├── 10. Greedy Problems/
-├── 11. Dynamic Programming/
-├── practice.py
-```
+### 14. Backtracking
+Subsets · Permutations · Combination sum · N-Queens · Word search
 
-## 🎯 How to Use
-
-1. **Clone the repository** 
-
-```bash
-git clone https://github.com/Achal13jain/Topic-wise-DSA-Imp-questions-Python.git
-cd Topic-wise-DSA-Imp-questions-Python
-```
-2. **Navigate to a topic folder** based on what you want to practice
-3. **Read the solution** to understand the approach and algorithm
-4. **Note the time & space complexity** (usually in function docstring or comments)
-5. **Try implementing** yourself before reading the solution
-6. **Focus on _IMP problems** for quick interview prep
-
-## 💡 Problem Markers
-
-- **`_IMP`** suffix: Important interview questions - **prioritize these for interview prep**
-- **Regular files**: Good for learning and building solid fundamentals
-
-## 🔍 Complexity Notation
-
-In this repository:
-- **Time Complexity**: How fast the algorithm runs (e.g., O(n), O(n log n), O(n²))
-- **Space Complexity**: Extra memory used (e.g., O(1), O(n))
-- **Look for comments** in solutions mentioning these complexities
-
-## 🚀 Best Practices & Tips
-
-1. **Understand before coding** - Read the problem and understand what's needed
-2. **Know your complexity** - Always be aware of time/space trade-offs
-3. **Practice multiple approaches** - One problem can be solved many ways
-4. **Review _IMP problems** - These appear frequently in interviews
-5. **Write test cases** - Verify edge cases (empty inputs, single elements, etc.)
-6. **Learn the pattern** - Each problem teaches a technique applicable elsewhere
-
-## 📖 Recommended Learning Path
-
-### 👶 For Beginners
-```
-1. Basic and Maths (foundation)
-   ↓
-2. Array and Prefix Sum (core data structure)
-   ↓
-3. Strings (pattern matching)
-   ↓
-4. Hashing (problem optimization)
-```
-
-### 🏃 For Intermediate
-```
-5. Two Pointers & Sliding Window (technique mastery)
-   ↓
-6. Stack & Queue (advanced data structures)
-   ↓
-7. Linked List (pointer manipulation)
-```
-
-### 🚀 For Advanced
-```
-8. Trees (recursive thinking)
-   ↓
-9. Binary Search (search optimization)
-   ↓
-10. Greedy Problems (optimization strategy)
-   ↓
-11. Dynamic Programming (problem solving paradigm)
-```
-
-### 🎯 For Interview Prep (Fast Track)
-Focus on all **_IMP** problems across all topics in 2-3 weeks. They cover 80% of interview questions.
+### 15. Trie
+Implement Trie (prefix tree)
 
 ---
 
-## 📊 Repository Statistics
+## 🗂️ Repository Structure
 
-- **Total Problems**: 80+
-- **Interview Problems**: 20+ (marked with _IMP)
-- **Topics**: 11
-- **Code Lines**: 3000+
-- **Language**: Python 3
+```
+├── 01. Basic and maths/        (8 problems)
+├── 02. Array and prefix_sum/   (17 problems)
+├── 03. Strings/                (9 problems)
+├── 04. Hashing/                (4 problems)
+├── 05. Two pointers & Sliding window/  (3 problems)
+├── 06. Stack & Queue/          (4 problems)
+├── 07. Linked List/            (5 problems)
+├── 08. Trees/                  (9 problems + TreeNode.py helper)
+├── 09. Binary Search/          (5 problems)
+├── 10. Greedy Problems/        (6 problems)
+├── 11. Dynamic Programming/    (11 problems)
+├── 12. Graphs/                 (7 problems)
+├── 13. Heap and Priority Queue/ (4 problems)
+├── 14. Backtracking/           (5 problems)
+├── 15. Trie/                   (1 problem)
+├── index.html                  — filterable visual index
+├── PATTERNS.md                 — signal → technique cheat-sheet
+└── DATA_STRUCTURES.md          — requirement → data-structure chooser
+```
 
-## 🛠️ Tools & Concepts Used
+---
 
-- **Data Structures**: Arrays, Strings, Hash Maps, Stacks, Queues, Linked Lists, Trees
-- **Algorithms**: Sorting, Searching, Dynamic Programming, Greedy, BFS, DFS
-- **Techniques**: Two Pointers, Sliding Window, Prefix Sum, Recursion, Memoization
+## 🎯 How to Use
 
-## 💪 Common Interview Topics Covered
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Achal13jain/Topic-wise-DSA-Imp-questions-Python.git
+   cd Topic-wise-DSA-Imp-questions-Python
+   ```
+2. **Navigate to a topic folder** and open any `.py` file.
+3. **Read or run the solution** — some files include a `if __name__ == "__main__":` sample block, and the rest can be tested by calling the function/class directly.
+4. **Focus on `_IMP` files** for quick interview prep — these are the priority revision picks in this repo.
+5. **Read PATTERNS.md** to recognise which technique to apply when you see a problem signal.
 
-- Array manipulation and optimization
-- String processing and pattern matching
-- Efficient searching (Binary Search)
-- Tree and Graph traversal
-- Recursive problem solving
-- Optimization techniques
-- Edge case handling
+---
+
+## 💡 Problem Markers
+
+- **`_IMP`** — Important priority picks for interview revision.
+- **Regular files** — Core problems for building solid fundamentals.
+
+---
+
+## 📖 Recommended Learning Path
+
+### Beginner
+```
+Basic and Maths → Array & Prefix Sum → Strings → Hashing
+```
+
+### Intermediate
+```
+Two Pointers & Sliding Window → Stack & Queue → Linked List
+```
+
+### Advanced
+```
+Trees → Binary Search → Greedy → Dynamic Programming
+→ Graphs → Heap & Priority Queue → Backtracking → Trie
+```
+
+### Fast-track Interview Prep (2–3 weeks)
+Focus on all **`_IMP`** files across every topic. They cover the patterns most likely to appear in a 45-minute interview round.
+
+---
 
 ## 🤝 Contributing
 
-Found an issue or want to add more solutions? Feel free to:
+Found an issue or want to improve a solution?
+
 1. Fork the repository
-2. Add or improve solutions
+2. Add or improve solutions (match the existing file format)
 3. Submit a pull request
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
+---
+
 ## 📝 License
 
-This repository is open source and available under the **MIT License** - feel free to use it for learning and interview prep.
-
-## 📧 Feedback
-
-If you found this repository helpful, please consider giving it a **⭐ Star**!
+MIT — free to use for learning and interview preparation.
 
 ---
+
 ## 👨‍💻 Author
 
-Achal Jain  
-GitHub: https://github.com/Achal13jain
+**Achal Jain** · [github.com/Achal13jain](https://github.com/Achal13jain)
 
 ---
-*Last Updated: February 2026*
 
-*Useful for technical interview preparation and strengthening DSA fundamentals*
+*Last updated: June 2026*
