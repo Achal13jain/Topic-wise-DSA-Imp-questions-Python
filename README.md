@@ -15,7 +15,7 @@
 
 | Resource | Purpose |
 |----------|---------|
-| [🌐 Visual Index](https://achal13jain.github.io/Topic-wise-DSA-Imp-questions-Python/) | Browse all problems in a filterable UI (enable GitHub Pages in repo Settings) |
+| [🌐 Visual Index](https://dsa-prep-atlas.pages.dev/) | Browse all problems in a filterable UI |
 | [PATTERNS.md](./PATTERNS.md) | Signal → technique cheat-sheet — "which pattern do I use?" |
 | [DATA_STRUCTURES.md](./DATA_STRUCTURES.md) | Requirement → data-structure chooser |
 
