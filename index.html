@@ -5,9 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>DSA Interview Prep &middot; Topic-wise Atlas</title>
 <meta name="description" content="A topic-wise atlas of important DSA interview problems in Python - find the pattern, jump to the solution." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#15171C" />
+<meta name="color-scheme" content="light" />
+<link rel="canonical" href="https://dsa-prep-atlas.pages.dev/" />
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="./favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+<link rel="manifest" href="./site.webmanifest" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="DSA Interview Prep" />
+<meta property="og:title" content="DSA Interview Prep · Topic-wise Atlas" />
+<meta property="og:description" content="98 important Python DSA problems organized by pattern, topic, and difficulty." />
+<meta property="og:url" content="https://dsa-prep-atlas.pages.dev/" />
+<meta property="og:image" content="https://dsa-prep-atlas.pages.dev/assets/social-preview.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="DSA Interview Prep topic-wise atlas with a connected graph illustration" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="DSA Interview Prep · Topic-wise Atlas" />
+<meta name="twitter:description" content="98 important Python DSA problems organized by pattern, topic, and difficulty." />
+<meta name="twitter:image" content="https://dsa-prep-atlas.pages.dev/assets/social-preview.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"DSA Interview Prep","alternateName":"Topic-wise DSA Atlas","url":"https://dsa-prep-atlas.pages.dev/","description":"A topic-wise atlas of important DSA interview problems in Python."}
+</script>
 <style>
   :root{
     --ink:#15171C; --paper:#F2F3EF; --card:#FFFFFF; --line:#DEE0D9; --muted:#666B77;
@@ -20,6 +44,10 @@
   body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter",system-ui,-apple-system,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;}
   a{color:inherit;text-decoration:none;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .skip-link{position:fixed;left:18px;top:18px;z-index:1000;background:#fff;color:var(--ink);padding:10px 15px;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.2);transform:translateY(-160%);transition:transform .15s;}
+  .skip-link:focus{transform:translateY(0);}
+  .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}
+  :where(a,button,input,[tabindex]):focus-visible{outline:3px solid var(--signal);outline-offset:3px;}
 
   /* HERO */
   .hero{background:var(--ink);color:var(--paper);overflow:hidden;}
@@ -98,11 +126,12 @@
   .topics{display:flex;flex-direction:column;gap:16px;}
   .topic{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden;transition:border-color .16s,box-shadow .16s;}
   .topic.open{box-shadow:0 16px 40px -22px rgba(20,24,40,.3);border-color:#C0C4BA;}
-  .thead{display:grid;grid-template-columns:auto 1fr auto auto;gap:20px;align-items:center;padding:22px 24px;cursor:pointer;user-select:none;}
+  .thead{display:grid;grid-template-columns:auto 1fr auto auto;gap:20px;align-items:center;padding:22px 24px;cursor:pointer;user-select:none;width:100%;border:0;background:transparent;text-align:left;font:inherit;color:inherit;}
   .thead:hover{background:#FAFBF8;}
   .tnum{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;color:var(--muted);min-width:22px;}
-  .tmain h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:19px;letter-spacing:-.01em;margin:0 0 3px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
-  .tmain p{color:var(--muted);font-size:13px;margin:0;line-height:1.5;}
+  .tmain{display:block;}
+  .tmain .t-title{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:19px;letter-spacing:-.01em;margin:0 0 3px;display:block;}
+  .tmain .t-blurb{color:var(--muted);font-size:13px;line-height:1.5;display:block;}
   .tcount{font-family:"JetBrains Mono",monospace;font-size:14px;color:var(--ink);font-weight:700;text-align:right;line-height:1;}
   .tcount span{display:block;font-size:10px;color:var(--muted);font-weight:500;letter-spacing:.06em;margin-top:3px;text-transform:uppercase;}
   .chev{width:20px;height:20px;color:var(--muted);transition:transform .22s;flex-shrink:0;}
@@ -202,9 +231,15 @@
     .pname{min-width:calc(100% - 28px);}
     .pdiff{margin-left:28px;}
   }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
+  }
 </style>
 </head>
 <body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="hero">
     <div class="wrap hero-grid">
@@ -235,6 +270,7 @@
     </div>
   </header>
 
+  <main id="main-content">
   <section id="patterns" class="wrap">
     <div class="sec-head"><span class="sec-num">01</span><h2>Which pattern do I use?</h2></div>
     <p class="sec-sub">Read the signal in a problem, then reach for the technique. Tap any row to filter the topics below.</p>
@@ -244,7 +280,7 @@
   <section id="datastructures" class="wrap">
     <div class="sec-head"><span class="sec-num">02</span><h2>Which data structure?</h2></div>
     <p class="sec-sub">Patterns give you the plan; structures are the tools. Pick what you need to be fast and the matching structures light up.</p>
-    <div class="ds-chips" id="dsChips"></div>
+    <div class="ds-chips" id="dsChips" role="group" aria-label="Filter data structures by need"></div>
     <div class="ds-grid" id="dsGrid"></div>
     <div class="ds-note">
       <b>Composite structures</b> - some problems need two working together: <b>LRU cache</b> = hash map + doubly linked list &middot; <b>streaming median</b> = two heaps &middot; <b>Dijkstra</b> = graph + min-heap &middot; <b>sliding-window max</b> = monotonic deque.
@@ -256,12 +292,13 @@
     <div class="sec-head"><span class="sec-num">03</span><h2>Browse every problem</h2></div>
     <p class="sec-sub">Click a topic to expand its problems. Each links straight to the solution on GitHub. Difficulty is color-coded: <b style="color:var(--easy)">easy</b>, <b style="color:var(--med)">medium</b>, <b style="color:var(--hard)">hard</b>. <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--signal)">IMP</span> marks priority problems.</p>
     <div class="toolbar">
-      <label class="search">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <div class="search">
+        <label class="sr-only" for="q">Search problems and topics</label>
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
         <input id="q" type="text" placeholder="Search a problem or topic..." autocomplete="off" />
         <button id="qClear" class="search-clear" aria-label="Clear search" title="Clear search" disabled>&times;</button>
-      </label>
-      <div class="pills" id="pills">
+      </div>
+      <div class="pills" id="pills" role="group" aria-label="Filter problems by difficulty">
         <button class="pill" data-f="all" aria-pressed="true">All</button>
         <button class="pill e" data-f="e" aria-pressed="false">Easy</button>
         <button class="pill m" data-f="m" aria-pressed="false">Medium</button>
@@ -269,15 +306,17 @@
         <button class="pill" data-f="imp" aria-pressed="false">IMP only</button>
       </div>
     </div>
+    <p id="resultStatus" class="sr-only" role="status" aria-live="polite"></p>
     <div class="topics" id="list"></div>
   </section>
+  </main>
 
   <footer>
     <div class="wrap">
       <div class="foot-top">
         <div class="foot-brand">
           <strong>DSA Interview Prep</strong>
-          <p>98 Python problems across 15 topics, grouped for interview prep and quick pattern recall.</p>
+          <p id="footerSummary">Python problems grouped for interview prep and quick pattern recall.</p>
         </div>
         <div class="foot-col">
           <h5>Study</h5>
@@ -465,6 +504,7 @@
     <div class="stat"><div class="n">${allProblems.length}</div><div class="l">Problems</div></div>
     <div class="stat"><div class="n">${TOPICS.length}</div><div class="l">Topics</div></div>
     <div class="stat"><div class="n">${allProblems.filter(p=>p[3]).length}</div><div class="l">IMP picks</div></div>`;
+  document.getElementById("footerSummary").textContent = `${allProblems.length} Python problems across ${TOPICS.length} topics, grouped for interview prep and quick pattern recall.`;
 
   // hero graph
   const NODES=[{x:60,y:160},{x:160,y:90},{x:160,y:230},{x:260,y:50},{x:260,y:150},{x:260,y:250},{x:360,y:100},{x:360,y:200},{x:440,y:60},{x:440,y:160},{x:440,y:260}];
@@ -478,8 +518,9 @@
 
   // decisions
   const q=document.getElementById("q");
+  const prefersReducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.getElementById("decisions").innerHTML = DECISIONS.map(d=>`<button class="dec" data-t="${d.t}"><span class="sig">${d.sig}</span><span class="tech">${d.tech}</span></button>`).join("");
-  document.querySelectorAll(".dec").forEach(b=>b.addEventListener("click",()=>{q.value=b.dataset.t;activeDiff="all";syncPills();syncClear();render();document.getElementById("topics").scrollIntoView({behavior:"smooth"});}));
+  document.querySelectorAll(".dec").forEach(b=>b.addEventListener("click",()=>{q.value=b.dataset.t;activeDiff="all";syncPills();syncClear();render();document.getElementById("topics").scrollIntoView({behavior:prefersReducedMotion?"auto":"smooth"});}));
 
   // data structure chooser
   const DS = [
@@ -512,6 +553,7 @@
 
   // list
   const list=document.getElementById("list");
+  const resultStatus=document.getElementById("resultStatus");
   let activeDiff="all";
   const DIFFLABEL={e:"Easy",m:"Medium",h:"Hard"};
 
@@ -521,7 +563,7 @@
   function render(){
     const term=q.value.trim().toLowerCase();
     const filtering = term!=="" || activeDiff!=="all";
-    let html="", shown=0;
+    let html="", shown=0, matchedProblems=0;
 
     TOPICS.forEach(t=>{
       const topicHit = topicTextMatch(t,term);
@@ -531,6 +573,7 @@
       });
       if(probs.length===0) return;
       shown++;
+      matchedProblems+=probs.length;
 
       const e=t.p.filter(p=>p[2]==="e").length, m=t.p.filter(p=>p[2]==="m").length, h=t.p.filter(p=>p[2]==="h").length, tot=t.p.length;
       const pe=e/tot*100, pm=m/tot*100, ph=h/tot*100;
@@ -548,27 +591,37 @@
         </a>`;
       }).join("");
 
+      const panelId=`topic-${t.num}-problems`;
       html += `<div class="topic ${open}">
-        <div class="thead" role="button" tabindex="0">
+        <button type="button" class="thead" aria-expanded="${filtering}" aria-controls="${panelId}">
           <span class="tnum">${t.num}</span>
-          <div class="tmain"><h3>${t.name}</h3><p>${t.blurb}</p></div>
-          <div class="tcount">${tot}<span>problems</span></div>
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-        </div>
-        <div class="bars"><i class="be" style="width:${pe}%"></i><i class="bm" style="width:${pm}%"></i><i class="bh" style="width:${ph}%"></i></div>
-        <div class="problems">
+          <span class="tmain"><span class="t-title">${t.name}</span><span class="t-blurb">${t.blurb}</span></span>
+          <span class="tcount">${tot}<span>problems</span></span>
+          <svg class="chev" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="bars" aria-hidden="true"><i class="be" style="width:${pe}%"></i><i class="bm" style="width:${pm}%"></i><i class="bh" style="width:${ph}%"></i></div>
+        <div class="problems" id="${panelId}">
           ${rows}
           <a class="folder-link" href="${folderHref}" target="_blank" rel="noopener">Open full folder on GitHub &rarr;</a>
         </div>
       </div>`;
     });
 
-    list.innerHTML = shown ? html : `<div class="empty">No problems match "<b>${q.value}</b>". Try clearing the filter.</div>`;
+    if(shown){
+      list.innerHTML=html;
+    }else{
+      list.innerHTML='<div class="empty"></div>';
+      list.querySelector(".empty").textContent=`No problems match "${q.value}". Try clearing the filter.`;
+    }
+    resultStatus.textContent=filtering
+      ? `${matchedProblems} ${matchedProblems===1?"problem":"problems"} in ${shown} ${shown===1?"topic":"topics"} match the current filters.`
+      : `Showing all ${allProblems.length} problems across ${TOPICS.length} topics.`;
 
     list.querySelectorAll(".thead").forEach(h=>{
-      const toggle=()=>h.closest(".topic").classList.toggle("open");
-      h.addEventListener("click",toggle);
-      h.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();toggle();}});
+      h.addEventListener("click",()=>{
+        const isOpen=h.closest(".topic").classList.toggle("open");
+        h.setAttribute("aria-expanded",isOpen);
+      });
     });
   }
 

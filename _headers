@@ -1,0 +1,11 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-Frame-Options: DENY
+
+/assets/*
+  Cache-Control: public, max-age=86400
+
+/favicon.ico
+  Cache-Control: public, max-age=86400

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">DSA Interview Prep</title>
+  <desc id="desc">Topic-wise Python interview preparation atlas</desc>
+  <rect width="1200" height="630" fill="#15171c"/>
+  <circle cx="1120" cy="-10" r="330" fill="#1d2241"/>
+  <circle cx="1090" cy="30" r="230" fill="#252d65" opacity=".7"/>
+  <g fill="none" stroke="#4d5688" stroke-width="4" opacity=".85">
+    <path d="M750 340 860 225l125 74 123-114M750 340l117 135 118-176 133 121M860 225l7 250M985 299l123-114 10 235"/>
+  </g>
+  <g stroke="#aeb5ff" stroke-width="4">
+    <circle cx="750" cy="340" r="18" fill="#f2f3ef"/>
+    <circle cx="860" cy="225" r="20" fill="#5468ff"/>
+    <circle cx="867" cy="475" r="18" fill="#f2f3ef"/>
+    <circle cx="985" cy="299" r="22" fill="#5468ff"/>
+    <circle cx="1108" cy="185" r="18" fill="#f2f3ef"/>
+    <circle cx="1118" cy="420" r="20" fill="#5468ff"/>
+  </g>
+  <text x="78" y="92" fill="#8e93ff" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="24" font-weight="700" letter-spacing="4">PYTHON · TOPIC-WISE</text>
+  <text x="74" y="235" fill="#f2f3ef" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="800">DSA Interview</text>
+  <text x="74" y="325" fill="#9aa0ff" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="800">Prep Atlas</text>
+  <text x="78" y="405" fill="#c7cad2" font-family="Inter, Arial, sans-serif" font-size="29">Find the pattern. Open the solution. Learn the shape.</text>
+  <g transform="translate(78 488)" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-weight="700">
+    <rect width="148" height="54" rx="27" fill="#5468ff"/>
+    <text x="74" y="35" fill="#fff" font-size="21" text-anchor="middle">98 PROBLEMS</text>
+    <rect x="164" width="132" height="54" rx="27" fill="#242832" stroke="#3a3e49"/>
+    <text x="230" y="35" fill="#f2f3ef" font-size="21" text-anchor="middle">15 TOPICS</text>
+  </g>
+</svg>

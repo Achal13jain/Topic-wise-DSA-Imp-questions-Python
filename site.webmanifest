@@ -1,0 +1,22 @@
+{
+  "name": "DSA Interview Prep · Topic-wise Atlas",
+  "short_name": "DSA Atlas",
+  "description": "Important Python DSA problems organized by pattern, topic, and difficulty.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F2F3EF",
+  "theme_color": "#15171C",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
