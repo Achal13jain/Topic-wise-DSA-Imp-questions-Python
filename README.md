@@ -2,12 +2,19 @@
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
 ![Problems](https://img.shields.io/badge/Problems-103-success)
+![Core 120](https://img.shields.io/badge/Core_120-103%2F120-5468FF)
 ![Topics](https://img.shields.io/badge/Topics-15-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
+[![Quality checks](https://github.com/Achal13jain/Topic-wise-DSA-Imp-questions-Python/actions/workflows/quality.yml/badge.svg)](https://github.com/Achal13jain/Topic-wise-DSA-Imp-questions-Python/actions/workflows/quality.yml)
 
 > **⭐ Star this repo if it helps you crack your interview!**
 
-103 curated problems · 15 topics · Interview-focused patterns · Python 3
+**103 solved problems across 15 topics**, organized by the patterns and data
+structures that appear most often in Python interviews. Each solution includes
+an approach and complexity analysis; priority questions are marked `_IMP`.
+
+Browse the filterable [DSA Prep Atlas](https://dsa-prep-atlas.pages.dev/) or
+follow the [Core 120 roadmap](./ROADMAP.md) for the planned learning sequence.
 
 ---
 
@@ -22,9 +29,12 @@
 
 ---
 
-## ✅ Progress Tracker
+## ✅ Core 120 Progress
 
-**Completion: 100% (103 / 103 problems)**
+**Core 120 progress:** 103 / 120 problems (86%)
+
+The original 98-problem collection is complete. The repository is now adding
+22 carefully selected questions to strengthen thin and missing interview patterns.
 
 | # | Topic | Easy | Medium | Hard | Total |
 |---|-------|------|--------|------|-------|
@@ -46,7 +56,7 @@
 | | **Total** | **33** | **58** | **12** | **103** |
 
 > **Note:** TreeNode.py in the Trees folder is a shared helper class, not a problem.  
-> Counts verified automatically: 103 solution files across 15 topic folders.
+> Counts and website mappings are verified automatically in CI: 103 solution files across 15 topic folders.
 
 ---
 
@@ -117,9 +127,11 @@ Implement Trie (prefix tree) · Add and search wildcard words · Word Search II
 ├── 13. Heap and Priority Queue/ (4 problems)
 ├── 14. Backtracking/           (5 problems)
 ├── 15. Trie/                   (3 problems)
+├── tests/                       — behavior and catalog consistency checks
 ├── index.html                  — filterable visual index
 ├── PATTERNS.md                 — signal → technique cheat-sheet
-└── DATA_STRUCTURES.md          — requirement → data-structure chooser
+├── DATA_STRUCTURES.md          — requirement → data-structure chooser
+└── ROADMAP.md                  — path to the Core 120 collection
 ```
 
 ---
@@ -135,6 +147,19 @@ Implement Trie (prefix tree) · Add and search wildcard words · Word Search II
 3. **Read or run the solution** — some files include a `if __name__ == "__main__":` sample block, and the rest can be tested by calling the function/class directly.
 4. **Focus on `_IMP` files** for quick interview prep — these are the priority revision picks in this repo.
 5. **Read PATTERNS.md** to recognise which technique to apply when you see a problem signal.
+
+### Run the quality checks
+
+No third-party packages are required:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+The suite checks solution behavior, Python 3.9 syntax, duplicate or missing
+catalog entries, README counts, website mappings, and documentation redirects.
+GitHub Actions runs the same checks on Python 3.9 and 3.13 for every push and
+pull request.
 
 ---
 
@@ -172,9 +197,11 @@ Focus on all **`_IMP`** files across every topic. They cover the patterns most l
 
 Found an issue or want to improve a solution?
 
-1. Fork the repository
-2. Add or improve solutions (match the existing file format)
-3. Submit a pull request
+1. Fork the repository.
+2. Add or improve a solution using the documented problem template.
+3. Update the website catalog when adding a new problem.
+4. Run `python -m unittest discover -s tests -v`.
+5. Submit a pull request.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
@@ -192,4 +219,4 @@ MIT — free to use for learning and interview preparation.
 
 ---
 
-*Last updated: June 2026*
+*Last updated: September 2026*

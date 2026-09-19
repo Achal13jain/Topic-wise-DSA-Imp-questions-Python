@@ -45,14 +45,21 @@ class CatalogTests(unittest.TestCase):
 
         self.assertEqual(on_disk, listed)
 
-    def test_readme_completion_count_matches_catalog(self) -> None:
+    def test_readme_and_roadmap_progress_match_catalog(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        match = re.search(r"\*\*Completion: 100% \((\d+) / (\d+) problems\)\*\*", readme)
+        roadmap = (ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        readme_match = re.search(
+            r"\*\*Core 120 progress:\*\* (\d+) / (\d+) problems",
+            readme,
+        )
+        roadmap_match = re.search(r"\*\*Current progress: (\d+) / (\d+) problems\*\*", roadmap)
 
-        self.assertIsNotNone(match)
-        completed, total = map(int, match.groups())
-        self.assertEqual(completed, total)
-        self.assertEqual(total, len(catalog_paths()))
+        self.assertIsNotNone(readme_match)
+        self.assertIsNotNone(roadmap_match)
+        self.assertEqual(readme_match.groups(), roadmap_match.groups())
+        completed, target = map(int, readme_match.groups())
+        self.assertEqual(completed, len(catalog_paths()))
+        self.assertEqual(120, target)
 
     def test_website_does_not_link_to_raw_repository_documents(self) -> None:
         html = (ROOT / "index.html").read_text(encoding="utf-8")
