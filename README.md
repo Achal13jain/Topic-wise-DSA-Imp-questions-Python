@@ -5,7 +5,7 @@
 ![Core 120](https://img.shields.io/badge/Core_120-103%2F120-5468FF)
 ![Topics](https://img.shields.io/badge/Topics-15-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
-[![Quality checks](https://github.com/Achal13jain/Topic-wise-DSA-Imp-questions-Python/actions/workflows/quality.yml/badge.svg)](https://github.com/Achal13jain/Topic-wise-DSA-Imp-questions-Python/actions/workflows/quality.yml)
+[![Quality checks](https://github.com/Achal13jain/python-dsa-interview-prep/actions/workflows/quality.yml/badge.svg)](https://github.com/Achal13jain/python-dsa-interview-prep/actions/workflows/quality.yml)
 
 > **⭐ Star this repo if it helps you crack your interview!**
 
@@ -140,8 +140,8 @@ Implement Trie (prefix tree) · Add and search wildcard words · Word Search II
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Achal13jain/Topic-wise-DSA-Imp-questions-Python.git
-   cd Topic-wise-DSA-Imp-questions-Python
+   git clone https://github.com/Achal13jain/python-dsa-interview-prep.git
+   cd python-dsa-interview-prep
    ```
 2. **Navigate to a topic folder** and open any `.py` file.
 3. **Read or run the solution** — some files include a `if __name__ == "__main__":` sample block, and the rest can be tested by calling the function/class directly.

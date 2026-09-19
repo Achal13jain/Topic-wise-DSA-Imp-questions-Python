@@ -83,6 +83,16 @@ class CatalogTests(unittest.TestCase):
                     rf"(?m)^/{re.escape(document)} https://github\.com/.+/blob/main/{re.escape(document)} 302$",
                 )
 
+    def test_public_files_use_current_repository_name(self) -> None:
+        old_name = "Topic-wise-DSA-Imp-questions-Python"
+        new_name = "python-dsa-interview-prep"
+
+        for relative_path in ("index.html", "README.md", "_redirects"):
+            with self.subTest(path=relative_path):
+                content = (ROOT / relative_path).read_text(encoding="utf-8")
+                self.assertNotIn(old_name, content)
+                self.assertIn(new_name, content)
+
     def test_all_python_files_parse(self) -> None:
         for path in ROOT.rglob("*.py"):
             if ".git" in path.parts:
