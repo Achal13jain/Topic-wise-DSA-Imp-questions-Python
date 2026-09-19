@@ -54,6 +54,12 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(completed, total)
         self.assertEqual(total, len(catalog_paths()))
 
+    def test_website_does_not_link_to_raw_repository_documents(self) -> None:
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        relative_documents = re.findall(r'href="\./[^\"]+(?:\.md|LICENSE)"', html)
+
+        self.assertEqual([], relative_documents)
+
     def test_all_python_files_parse(self) -> None:
         for path in ROOT.rglob("*.py"):
             if ".git" in path.parts:
