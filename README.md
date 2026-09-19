@@ -1,13 +1,13 @@
 # Python DSA Interview Prep
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
-![Problems](https://img.shields.io/badge/Problems-98-success)
+![Problems](https://img.shields.io/badge/Problems-103-success)
 ![Topics](https://img.shields.io/badge/Topics-15-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 > **⭐ Star this repo if it helps you crack your interview!**
 
-98 curated problems · 15 topics · Interview-focused patterns · Python 3
+103 curated problems · 15 topics · Interview-focused patterns · Python 3
 
 ---
 
@@ -18,20 +18,21 @@
 | [🌐 Visual Index](https://dsa-prep-atlas.pages.dev/) | Browse all problems in a filterable UI |
 | [PATTERNS.md](./PATTERNS.md) | Signal → technique cheat-sheet — "which pattern do I use?" |
 | [DATA_STRUCTURES.md](./DATA_STRUCTURES.md) | Requirement → data-structure chooser |
+| [ROADMAP.md](./ROADMAP.md) | Follow the curated path from 98 to 120 problems |
 
 ---
 
 ## ✅ Progress Tracker
 
-**Completion: 100% (98 / 98 problems)**
+**Completion: 100% (103 / 103 problems)**
 
 | # | Topic | Easy | Medium | Hard | Total |
 |---|-------|------|--------|------|-------|
 | 01 | Basic and Maths | 5 | 3 | 0 | 8 |
 | 02 | Array and Prefix Sum | 8 | 9 | 0 | 17 |
 | 03 | Strings | 4 | 4 | 1 | 9 |
-| 04 | Hashing | 1 | 3 | 0 | 4 |
-| 05 | Two Pointers & Sliding Window | 1 | 1 | 1 | 3 |
+| 04 | Hashing | 1 | 4 | 0 | 5 |
+| 05 | Two Pointers & Sliding Window | 1 | 3 | 1 | 5 |
 | 06 | Stack & Queue | 0 | 3 | 1 | 4 |
 | 07 | Linked List | 3 | 2 | 0 | 5 |
 | 08 | Trees | 5 | 2 | 2 | 9 |
@@ -41,11 +42,11 @@
 | 12 | Graphs | 2 | 5 | 0 | 7 |
 | 13 | Heap & Priority Queue | 0 | 2 | 2 | 4 |
 | 14 | Backtracking | 0 | 4 | 1 | 5 |
-| 15 | Trie | 0 | 1 | 0 | 1 |
-| | **Total** | **33** | **54** | **11** | **98** |
+| 15 | Trie | 0 | 2 | 1 | 3 |
+| | **Total** | **33** | **58** | **12** | **103** |
 
 > **Note:** TreeNode.py in the Trees folder is a shared helper class, not a problem.  
-> Counts verified programmatically: 98 solution files across 15 topic folders.
+> Counts verified automatically: 103 solution files across 15 topic folders.
 
 ---
 
@@ -61,10 +62,10 @@ Two Sum · 3Sum · Kadane's (max subarray) · Prefix sum · Product of array exc
 Valid parentheses · Longest substring without repeating · Minimum window substring · Longest palindromic substring · Group anagrams
 
 ### 4. Hashing
-Frequency counting · Longest common subsequence (hash) · Custom data structure design · Count distinct elements in window
+Frequency counting · Longest consecutive sequence · Custom data structure design · Count distinct elements in window · Valid Sudoku
 
 ### 5. Two Pointers & Sliding Window
-Two sum (sorted) · Max element in sliding window · Maximum consecutive ones
+Two sum (sorted) · Sliding window maximum · Maximum consecutive ones · Character replacement · Permutation in string
 
 ### 6. Stack & Queue
 Next greater element · Min stack · Largest rectangle in histogram · Rotten Oranges (multi-source BFS)
@@ -94,7 +95,7 @@ Kth largest element · Top K frequent elements · Merge K sorted lists · Find m
 Subsets · Permutations · Combination sum · N-Queens · Word search
 
 ### 15. Trie
-Implement Trie (prefix tree)
+Implement Trie (prefix tree) · Add and search wildcard words · Word Search II
 
 ---
 
@@ -104,8 +105,8 @@ Implement Trie (prefix tree)
 ├── 01. Basic and maths/        (8 problems)
 ├── 02. Array and prefix_sum/   (17 problems)
 ├── 03. Strings/                (9 problems)
-├── 04. Hashing/                (4 problems)
-├── 05. Two pointers & Sliding window/  (3 problems)
+├── 04. Hashing/                (5 problems)
+├── 05. Two pointers & Sliding window/  (5 problems)
 ├── 06. Stack & Queue/          (4 problems)
 ├── 07. Linked List/            (5 problems)
 ├── 08. Trees/                  (9 problems + TreeNode.py helper)
@@ -115,7 +116,7 @@ Implement Trie (prefix tree)
 ├── 12. Graphs/                 (7 problems)
 ├── 13. Heap and Priority Queue/ (4 problems)
 ├── 14. Backtracking/           (5 problems)
-├── 15. Trie/                   (1 problem)
+├── 15. Trie/                   (3 problems)
 ├── index.html                  — filterable visual index
 ├── PATTERNS.md                 — signal → technique cheat-sheet
 └── DATA_STRUCTURES.md          — requirement → data-structure chooser

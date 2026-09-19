@@ -20,9 +20,9 @@
   <text x="74" y="325" fill="#9aa0ff" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="800">Prep Atlas</text>
   <text x="78" y="405" fill="#c7cad2" font-family="Inter, Arial, sans-serif" font-size="29">Find the pattern. Open the solution. Learn the shape.</text>
   <g transform="translate(78 488)" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-weight="700">
-    <rect width="148" height="54" rx="27" fill="#5468ff"/>
-    <text x="74" y="35" fill="#fff" font-size="21" text-anchor="middle">98 PROBLEMS</text>
-    <rect x="164" width="132" height="54" rx="27" fill="#242832" stroke="#3a3e49"/>
-    <text x="230" y="35" fill="#f2f3ef" font-size="21" text-anchor="middle">15 TOPICS</text>
+    <rect width="164" height="54" rx="27" fill="#5468ff"/>
+    <text x="82" y="35" fill="#fff" font-size="21" text-anchor="middle">103 PROBLEMS</text>
+    <rect x="180" width="132" height="54" rx="27" fill="#242832" stroke="#3a3e49"/>
+    <text x="246" y="35" fill="#f2f3ef" font-size="21" text-anchor="middle">15 TOPICS</text>
   </g>
 </svg>
