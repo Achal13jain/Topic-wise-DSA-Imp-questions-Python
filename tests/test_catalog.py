@@ -60,6 +60,22 @@ class CatalogTests(unittest.TestCase):
 
         self.assertEqual([], relative_documents)
 
+    def test_direct_document_urls_redirect_to_rendered_github_pages(self) -> None:
+        redirects = (ROOT / "_redirects").read_text(encoding="utf-8")
+        for document in (
+            "ROADMAP.md",
+            "PATTERNS.md",
+            "DATA_STRUCTURES.md",
+            "README.md",
+            "CONTRIBUTING.md",
+            "LICENSE",
+        ):
+            with self.subTest(document=document):
+                self.assertRegex(
+                    redirects,
+                    rf"(?m)^/{re.escape(document)} https://github\.com/.+/blob/main/{re.escape(document)} 302$",
+                )
+
     def test_all_python_files_parse(self) -> None:
         for path in ROOT.rglob("*.py"):
             if ".git" in path.parts:
