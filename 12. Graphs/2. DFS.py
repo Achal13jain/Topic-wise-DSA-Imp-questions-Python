@@ -34,11 +34,8 @@ def dfs_recursive(
 
 
 def dfs(graph: Dict[int, List[int]], start: int) -> List[int]:
-    """Return DFS traversal order (recursive) starting from `start`."""
-    visited: set = set()
-    order: List[int] = []
-    dfs_recursive(graph, start, visited, order)
-    return order
+    """Return DFS order without depending on Python's recursion limit."""
+    return dfs_iterative(graph, start)
 
 
 def dfs_iterative(graph: Dict[int, List[int]], start: int) -> List[int]:

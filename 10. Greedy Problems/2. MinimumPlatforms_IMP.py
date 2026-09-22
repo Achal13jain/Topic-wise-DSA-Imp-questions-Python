@@ -16,8 +16,10 @@ Why optimal: Sorting arrivals and departures allows processing events in time or
 # Otherwise → reuse platform
 
 def min_platforms(arr, dep):
-    arr.sort()
-    dep.sort()
+    if not arr:
+        return 0
+    arr = sorted(arr)
+    dep = sorted(dep)
 
     i = 0
     j = 0
@@ -36,9 +38,10 @@ def min_platforms(arr, dep):
     return max_platforms
 
 #Example usage:
-arr = [900, 940, 950, 1100, 1500, 1800]
-dep = [910, 1200, 1120, 1130, 1900, 2000]
-print(min_platforms(arr, dep))  # Output: 3
+if __name__ == "__main__":
+    arr = [900, 940, 950, 1100, 1500, 1800]
+    dep = [910, 1200, 1120, 1130, 1900, 2000]
+    print(min_platforms(arr, dep))  # Output: 3
 
 # Time complexity: O(n log n) 
 # Space Complexity: O(1)

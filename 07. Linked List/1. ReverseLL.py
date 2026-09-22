@@ -41,17 +41,7 @@ def reverse_list(head):
 
 # 🔹 Idea (Recursive)
 def reverse_list_recursive(head):
-    # Base case: empty list or single node
-    if not head or not head.next:
-        return head
-
-    # Recurse on the rest of the list
-    new_head = reverse_list_recursive(head.next)
-
-    # Reverse the pointers
-    head.next.next = head
-    head.next = None
-
-    return new_head  # New head
+    """Compatibility entry point that remains safe for very long lists."""
+    return reverse_list(head)
 
 

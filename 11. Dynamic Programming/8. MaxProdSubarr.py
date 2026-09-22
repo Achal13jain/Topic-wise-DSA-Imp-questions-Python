@@ -14,6 +14,8 @@ Why optimal: Tracks min and max products at each step to handle negative numbers
 # Track both max and min product
 
 def max_product(nums):
+    if not nums:
+        return 0
     max_prod = nums[0]
     min_prod = nums[0]
     result = nums[0]

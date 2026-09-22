@@ -24,7 +24,8 @@ Why optimal: Iterates over all substrings and computes frequencies on the fly.
 # Input: s = "aabcbaa"
 # Output: 17
 
-def beautySum(self, s: str) -> int:
+def beauty_sum(s: str) -> int:
+    """Return the sum of max-minus-min character frequencies per substring."""
     n = len(s)
     total = 0
 
@@ -44,3 +45,10 @@ def beautySum(self, s: str) -> int:
             total += (maxi - mini)
 
     return total
+
+
+if __name__ == "__main__":
+    assert beauty_sum("aabcb") == 5
+    assert beauty_sum("aabcbaa") == 17
+    assert beauty_sum("") == 0
+    print("All tests passed!")

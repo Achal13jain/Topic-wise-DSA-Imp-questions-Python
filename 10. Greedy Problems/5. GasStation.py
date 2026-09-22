@@ -17,6 +17,8 @@ Why optimal: Greedy check track total surplus; if checking from 'start' fails, n
 # Reset start whenever fuel becomes negative
 
 def gas_station(gas, cost):
+    if not gas:
+        return -1
     total = 0
     curr = 0
     start = 0
@@ -32,9 +34,10 @@ def gas_station(gas, cost):
     return start if total >= 0 else -1
 
 # Example:
-gas=[1,2,3,4,5]
-cost=[3,4,5,1,2]
-print(gas_station(gas,cost))# Output: 3
+if __name__ == "__main__":
+    gas=[1,2,3,4,5]
+    cost=[3,4,5,1,2]
+    print(gas_station(gas,cost))# Output: 3
 
 # Time Complexity: O(n)
 # Space Complexity: O(1)

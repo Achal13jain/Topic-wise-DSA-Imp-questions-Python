@@ -21,11 +21,11 @@ Why optimal: Taking items with highest value-to-weight ratio first strictly maxi
 
 def fractional_knapsack(items, W):
     # items = [(value, weight)]
-    items.sort(key=lambda x: x[0] / x[1], reverse=True)
+    ordered_items = sorted(items, key=lambda x: x[0] / x[1], reverse=True)
 
     total_value = 0
 
-    for value, weight in items:
+    for value, weight in ordered_items:
         if W == 0:
             break
 

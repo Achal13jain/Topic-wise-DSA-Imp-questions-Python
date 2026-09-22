@@ -17,6 +17,8 @@ Why optimal: Kadane's Algorithm is the standard linear time solution for this pr
 # Keep track of max sum
 
 def max_subarray(nums):
+    if not nums:
+        return 0
     max_sum = curr_sum =nums[0]
     
     for i in range(1, len(nums)):
@@ -27,9 +29,10 @@ def max_subarray(nums):
     return max_sum
 
 # Example usage:
-nums = [-2,1,-3,4,-1,2,1,-5,4]
-result = max_subarray(nums)
-print(result)  # Output: 6  # Explanation: [4,-1,2,1] has the largest sum = 6
+if __name__ == "__main__":
+    nums = [-2,1,-3,4,-1,2,1,-5,4]
+    result = max_subarray(nums)
+    print(result)  # Output: 6
 
 # ⏱ Time: O(n)
 # 📦 Space: O(1)

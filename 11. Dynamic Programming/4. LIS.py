@@ -17,6 +17,8 @@ Why optimal: DP approach builds solution by checking all previous elements for e
 
 def length_of_LIS(nums):
     n = len(nums)
+    if n == 0:
+        return 0
     dp = [1] * n
 
     for i in range(n):

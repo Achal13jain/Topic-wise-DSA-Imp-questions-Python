@@ -17,7 +17,9 @@ Why optimal: Binary search on the answer (distance) checks feasibility in linear
 # Check if cows can be placed with distance ≥ mid
 
 def aggressive_cows(stalls, cows):
-    stalls.sort()
+    if not stalls or cows <= 1:
+        return 0
+    stalls = sorted(stalls)
 
     def can_place(distance):
         count = 1

@@ -21,6 +21,10 @@ from typing import List
 
 def exist(board: List[List[str]], word: str) -> bool:
     """Return True if `word` exists in `board` as a connected path."""
+    if not word:
+        return True
+    if not board or not board[0]:
+        return False
     rows, cols = len(board), len(board[0])
     directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
 

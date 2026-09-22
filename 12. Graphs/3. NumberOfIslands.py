@@ -14,7 +14,7 @@ Approach:
     overwriting its cells with '0'.
 
 Time:  O(m × n)  — each cell is visited at most twice
-Space: O(m × n)  — DFS recursion stack in worst case (all land)
+Space: O(m × n)  — explicit stack in the worst case (all land)
 """
 
 from typing import List
@@ -28,15 +28,26 @@ def num_islands(grid: List[List[str]]) -> int:
     rows, cols = len(grid), len(grid[0])
     count = 0
 
-    def flood_fill(r: int, c: int) -> None:
-        """Mark all connected land cells starting from (r, c) as visited."""
-        if r < 0 or r >= rows or c < 0 or c >= cols or grid[r][c] != "1":
-            return
-        grid[r][c] = "0"          # mark visited
-        flood_fill(r + 1, c)
-        flood_fill(r - 1, c)
-        flood_fill(r, c + 1)
-        flood_fill(r, c - 1)
+    def flood_fill(start_r: int, start_c: int) -> None:
+        """Mark connected land without risking a recursion-depth failure."""
+        grid[start_r][start_c] = "0"
+        stack = [(start_r, start_c)]
+
+        while stack:
+            r, c = stack.pop()
+            for next_r, next_c in (
+                (r + 1, c),
+                (r - 1, c),
+                (r, c + 1),
+                (r, c - 1),
+            ):
+                if (
+                    0 <= next_r < rows
+                    and 0 <= next_c < cols
+                    and grid[next_r][next_c] == "1"
+                ):
+                    grid[next_r][next_c] = "0"
+                    stack.append((next_r, next_c))
 
     for r in range(rows):
         for c in range(cols):

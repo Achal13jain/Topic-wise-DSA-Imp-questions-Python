@@ -24,12 +24,12 @@ Why optimal: Monotonic stack finds the nearest smaller element boundaries for ea
 def largest_rectangle_area(heights):
     stack = []      # stack of indices
     max_area = 0
-    heights.append(0)  # sentinel to empty stack
+    extended_heights = heights + [0]  # sentinel without mutating caller input
 
-    for i in range(len(heights)):
+    for i in range(len(extended_heights)):
         # Maintain increasing stack
-        while stack and heights[stack[-1]] > heights[i]:
-            h = heights[stack.pop()]
+        while stack and extended_heights[stack[-1]] > extended_heights[i]:
+            h = extended_heights[stack.pop()]
 
             # Width calculation
             if not stack:
@@ -42,8 +42,8 @@ def largest_rectangle_area(heights):
         stack.append(i)
 
     return max_area
-# Example usage
-heights = [2, 1, 5, 6, 2, 3]
-print(largest_rectangle_area(heights))  # Output: 10
+if __name__ == "__main__":
+    heights = [2, 1, 5, 6, 2, 3]
+    print(largest_rectangle_area(heights))  # Output: 10
 # Time Complexity: O(n)
 # Space Complexity: O(n)

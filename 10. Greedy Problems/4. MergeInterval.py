@@ -15,12 +15,12 @@ Why optimal: Sorting by start time allows merging overlaps in a single linear pa
 # Merge if current overlaps with previous
 
 def merge_intervals(intervals):
-    intervals.sort(key=lambda x: x[0])
+    ordered_intervals = sorted(intervals, key=lambda x: x[0])
     merged = []
 
-    for interval in intervals:
+    for interval in ordered_intervals:
         if not merged or merged[-1][1] < interval[0]:
-            merged.append(interval)
+            merged.append(interval[:])
         else:
             merged[-1][1] = max(merged[-1][1], interval[1])
 

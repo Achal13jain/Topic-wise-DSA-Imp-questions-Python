@@ -31,8 +31,7 @@ def find_kth_largest(nums: List[int], k: int) -> int:
 
 def find_kth_largest_sort(nums: List[int], k: int) -> int:
     """Return the k-th largest element using sorting (simpler, O(n log n))."""
-    nums.sort(reverse=True)
-    return nums[k - 1]
+    return sorted(nums, reverse=True)[k - 1]
 
 
 if __name__ == "__main__":
