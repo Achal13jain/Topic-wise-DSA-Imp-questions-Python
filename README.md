@@ -1,15 +1,15 @@
 # Python DSA Interview Prep
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
-![Problems](https://img.shields.io/badge/Problems-103-success)
-![Core 120](https://img.shields.io/badge/Core_120-103%2F120-5468FF)
+![Problems](https://img.shields.io/badge/Problems-104-success)
+![Core 120](https://img.shields.io/badge/Core_120-104%2F120-5468FF)
 ![Topics](https://img.shields.io/badge/Topics-15-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 [![Quality checks](https://github.com/Achal13jain/python-dsa-interview-prep/actions/workflows/quality.yml/badge.svg)](https://github.com/Achal13jain/python-dsa-interview-prep/actions/workflows/quality.yml)
 
 > **⭐ Star this repo if it helps you crack your interview!**
 
-**103 solved problems across 15 topics**, organized by the patterns and data
+**104 solved problems across 15 topics**, organized by the patterns and data
 structures that appear most often in Python interviews. Each solution includes
 an approach and complexity analysis; priority questions are marked `_IMP`.
 
@@ -31,14 +31,14 @@ follow the [Core 120 roadmap](./ROADMAP.md) for the planned learning sequence.
 
 ## ✅ Core 120 Progress
 
-**Core 120 progress:** 103 / 120 problems (86%)
+**Core 120 progress:** 104 / 120 problems (87%)
 
 The original 98-problem collection is complete. The repository is now adding
 22 carefully selected questions to strengthen thin and missing interview patterns.
 
 | # | Topic | Easy | Medium | Hard | Total |
 |---|-------|------|--------|------|-------|
-| 01 | Basic and Maths | 5 | 3 | 0 | 8 |
+| 01 | Basic and Maths | 6 | 3 | 0 | 9 |
 | 02 | Array and Prefix Sum | 8 | 9 | 0 | 17 |
 | 03 | Strings | 4 | 4 | 1 | 9 |
 | 04 | Hashing | 1 | 4 | 0 | 5 |
@@ -53,17 +53,17 @@ The original 98-problem collection is complete. The repository is now adding
 | 13 | Heap & Priority Queue | 0 | 2 | 2 | 4 |
 | 14 | Backtracking | 0 | 4 | 1 | 5 |
 | 15 | Trie | 0 | 2 | 1 | 3 |
-| | **Total** | **33** | **58** | **12** | **103** |
+| | **Total** | **34** | **58** | **12** | **104** |
 
 > **Note:** TreeNode.py in the Trees folder is a shared helper class, not a problem.  
-> Counts and website mappings are verified automatically in CI: 103 solution files across 15 topic folders.
+> Counts and website mappings are verified automatically in CI: 104 solution files across 15 topic folders.
 
 ---
 
 ## 📚 Topics Covered
 
 ### 1. Basic and Maths
-LCM & GCD · XOR properties · Power and modular exponentiation · Sieve of Eratosthenes · Perfect squares
+LCM & GCD · Divisors · XOR properties · Power and modular exponentiation · Sieve of Eratosthenes · Perfect squares
 
 ### 2. Array and Prefix Sum
 Two Sum · 3Sum · Kadane's (max subarray) · Prefix sum · Product of array except self · Merge sorted arrays · Move zeroes
@@ -112,7 +112,7 @@ Implement Trie (prefix tree) · Add and search wildcard words · Word Search II
 ## 🗂️ Repository Structure
 
 ```
-├── 01. Basic and maths/        (8 problems)
+├── 01. Basic and maths/        (9 problems)
 ├── 02. Array and prefix_sum/   (17 problems)
 ├── 03. Strings/                (9 problems)
 ├── 04. Hashing/                (5 problems)

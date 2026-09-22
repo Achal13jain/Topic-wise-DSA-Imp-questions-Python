@@ -28,6 +28,7 @@ def load_module(name: str, relative_path: str) -> ModuleType:
 
 
 find_primes = load_module("find_primes", "01. Basic and maths/8. find_primes.py")
+find_divisors = load_module("find_divisors", "01. Basic and maths/9. FindDivisors.py")
 beauty_sum = load_module("beauty_sum", "03. Strings/8. SumOfBeauty.py")
 largest_rectangle = load_module(
     "largest_rectangle",
@@ -84,6 +85,13 @@ word_search = load_module("word_search", "14. Backtracking/5. WordSearch.py")
 
 
 class BasicMathRegressionTests(unittest.TestCase):
+    def test_find_divisors_handles_regular_square_and_boundary_inputs(self) -> None:
+        self.assertEqual([], find_divisors.find_divisors(0))
+        self.assertEqual([], find_divisors.find_divisors(-12))
+        self.assertEqual([1], find_divisors.find_divisors(1))
+        self.assertEqual([1, 2, 3, 4, 6, 9, 12, 18, 36], find_divisors.find_divisors(36))
+        self.assertEqual([1, 13], find_divisors.Solution().divisors(13))
+
     def test_sieve_handles_values_below_two(self) -> None:
         self.assertEqual([], find_primes.sieve_of_eratosthenes(-1))
         self.assertEqual([], find_primes.sieve_of_eratosthenes(0))
