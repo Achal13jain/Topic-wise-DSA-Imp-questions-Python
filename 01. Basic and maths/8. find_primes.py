@@ -35,7 +35,11 @@ Why optimal: Sieve of Eratosthenes is the standard efficient algorithm for findi
 # Start marking from p*p because smaller multiples are already handled
 
 # 🔹 Optimal DSA Solution (Pure Logic)
-def sieve_of_eratosthenes(n):
+def sieve_of_eratosthenes(n: int) -> list[int]:
+    """Return every prime number in the inclusive range ``[2, n]``."""
+    if n < 2:
+        return []
+
     is_prime = [True] * (n + 1)
     is_prime[0] = False
     is_prime[1] = False
@@ -56,7 +60,12 @@ def sieve_of_eratosthenes(n):
 
     return primes
 
-print(sieve_of_eratosthenes(30))
+if __name__ == "__main__":
+    assert sieve_of_eratosthenes(0) == []
+    assert sieve_of_eratosthenes(1) == []
+    assert sieve_of_eratosthenes(2) == [2]
+    assert sieve_of_eratosthenes(30) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+    print("All tests passed!")
 
 # Time: O(n log log n)
 # Space: O(n)

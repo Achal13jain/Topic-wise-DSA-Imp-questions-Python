@@ -15,35 +15,39 @@ from TreeNode import TreeNode
 
 def serialize(root):
     result = []
-
-    def dfs(node):
+    stack = [root]
+    while stack:
+        node = stack.pop()
         if not node:
             result.append("#")
-            return
+            continue
         result.append(str(node.val))
-        dfs(node.left)
-        dfs(node.right)
-
-    dfs(root)
+        stack.append(node.right)
+        stack.append(node.left)
     return ",".join(result)
 
 def deserialize(data):
+    if not data or data == "#":
+        return None
     values = data.split(",")
-    index = 0
+    root = TreeNode(int(values[0]))
+    stack = [(root, 0)]  # state 0 expects left; state 1 expects right
 
-    def dfs():
-        nonlocal index
-        if values[index] == "#":
-            index += 1
-            return None
+    for value in values[1:]:
+        parent, state = stack[-1]
+        child = None if value == "#" else TreeNode(int(value))
 
-        node = TreeNode(int(values[index]))
-        index += 1
-        node.left = dfs()
-        node.right = dfs()
-        return node
+        if state == 0:
+            parent.left = child
+            stack[-1] = (parent, 1)
+        else:
+            parent.right = child
+            stack.pop()
 
-    return dfs()
+        if child:
+            stack.append((child, 0))
+
+    return root
 
 # Time Complexity O(n)
 # Space Complexity O(n)

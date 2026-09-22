@@ -23,7 +23,7 @@ from typing import List
 def combination_sum(candidates: List[int], target: int) -> List[List[int]]:
     """Return all combinations that sum to `target` (elements reusable)."""
     result: List[List[int]] = []
-    candidates.sort()  # optional but enables early pruning
+    candidates = sorted(candidates)  # enables early pruning without mutating input
     path: List[int] = []
 
     def backtrack(start: int, remaining: int) -> None:

@@ -16,9 +16,11 @@ Why optimal: Iteratively computes GCD of current result and next element.
 def gcd(a, b):
     while b:
         a, b = b, a % b
-    return a
+    return abs(a)
 
 def gcd_array(arr):
+    if not arr:
+        return 0
     result = arr[0]
     for i in range(1, len(arr)):
         result = gcd(result, arr[i])
@@ -26,8 +28,9 @@ def gcd_array(arr):
             break
     return result
 
-print(gcd_array([24, 36, 12]))  # 12
-print(gcd_array([7, 13, 29]))   # 1
+if __name__ == "__main__":
+    print(gcd_array([24, 36, 12]))  # 12
+    print(gcd_array([7, 13, 29]))   # 1
 
 #⏱ Time: O(n log max(arr))
 #📦 Space: O(1)

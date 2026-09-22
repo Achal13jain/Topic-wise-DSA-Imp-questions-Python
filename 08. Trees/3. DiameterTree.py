@@ -14,22 +14,24 @@ Why optimal: Calculates height and diameter in the same DFS traversal, avoiding 
 # Track maximum globally
 
 def diameter_of_binary_tree(root):
+    if not root:
+        return 0
     diameter = 0
-
-    def dfs(node):
-        nonlocal diameter
-        if not node:
-            return 0
-
-        left = dfs(node.left)
-        right = dfs(node.right)
-
-        # Update diameter
-        diameter = max(diameter, left + right)
-
-        return 1 + max(left, right)
-
-    dfs(root)
+    heights = {None: 0}
+    stack = [(root, False)]
+    while stack:
+        node, visited = stack.pop()
+        if visited:
+            left = heights[node.left]
+            right = heights[node.right]
+            diameter = max(diameter, left + right)
+            heights[node] = 1 + max(left, right)
+            continue
+        stack.append((node, True))
+        if node.right:
+            stack.append((node.right, False))
+        if node.left:
+            stack.append((node.left, False))
     return diameter
 
 # Time Complexity O(n)

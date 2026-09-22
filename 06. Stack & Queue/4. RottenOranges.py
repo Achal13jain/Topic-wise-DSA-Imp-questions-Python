@@ -23,6 +23,8 @@ Why optimal: Multi-source BFS is the most natural way to simulate the simultaneo
 from collections import deque
 
 def oranges_rotting(grid):
+    if not grid or not grid[0]:
+        return 0
     rows, cols = len(grid), len(grid[0])
     queue = deque()
     fresh = 0
@@ -56,11 +58,12 @@ def oranges_rotting(grid):
 
     return time if fresh == 0 else -1
 # Example usage
-grid = [
-    [2,1,1],
-    [1,1,0],
-    [0,1,1]
-]
-print(oranges_rotting(grid))  # Output: 4
+if __name__ == "__main__":
+    grid = [
+        [2,1,1],
+        [1,1,0],
+        [0,1,1]
+    ]
+    print(oranges_rotting(grid))  # Output: 4
 # Time Complexity: O(m*n)
 # Space Complexity: O(m*n)

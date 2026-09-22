@@ -8,43 +8,21 @@ Problem:
     whether it is possible to finish all courses.
 
 Approach:
-    Model as a directed graph. The answer is "yes" if and only if the
-    graph has no cycle. Use DFS with a 3-state coloring:
-      0 = unvisited, 1 = in current DFS path, 2 = fully processed.
-    If we reach a node that's already on the current path (state 1),
-    a cycle exists.
+    Model prerequisites as a directed graph and use Kahn's topological
+    sort. Courses with zero remaining prerequisites enter a queue. If
+    every course is processed, no cycle exists.
 
 Time:  O(V + E)  — standard DFS over courses and prerequisites
-Space: O(V + E)  — adjacency list + color array + recursion stack
+Space: O(V + E)  — adjacency list, indegrees, and queue
 """
 
 from typing import List
-from collections import defaultdict
+from collections import defaultdict, deque
 
 
 def can_finish(num_courses: int, prerequisites: List[List[int]]) -> bool:
     """Return True if all courses can be finished (no cycle exists)."""
-    graph: dict = defaultdict(list)
-    for course, prereq in prerequisites:
-        graph[prereq].append(course)
-
-    # 0 = unvisited | 1 = visiting (on current path) | 2 = done
-    color = [0] * num_courses
-
-    def has_cycle(node: int) -> bool:
-        if color[node] == 1:
-            return True   # back-edge → cycle
-        if color[node] == 2:
-            return False  # already fully explored, safe
-
-        color[node] = 1
-        for neighbour in graph[node]:
-            if has_cycle(neighbour):
-                return True
-        color[node] = 2
-        return False
-
-    return not any(has_cycle(c) for c in range(num_courses) if color[c] == 0)
+    return len(find_order(num_courses, prerequisites)) == num_courses
 
 
 def find_order(num_courses: int, prerequisites: List[List[int]]) -> List[int]:
@@ -53,27 +31,22 @@ def find_order(num_courses: int, prerequisites: List[List[int]]) -> List[int]:
     for course, prereq in prerequisites:
         graph[prereq].append(course)
 
-    color = [0] * num_courses
+    indegree = [0] * num_courses
+    for course, _ in prerequisites:
+        indegree[course] += 1
+
+    queue = deque(course for course in range(num_courses) if indegree[course] == 0)
     order: List[int] = []
 
-    def dfs(node: int) -> bool:
-        if color[node] == 1:
-            return False
-        if color[node] == 2:
-            return True
-        color[node] = 1
-        for nb in graph[node]:
-            if not dfs(nb):
-                return False
-        color[node] = 2
-        order.append(node)
-        return True
+    while queue:
+        course = queue.popleft()
+        order.append(course)
+        for next_course in graph[course]:
+            indegree[next_course] -= 1
+            if indegree[next_course] == 0:
+                queue.append(next_course)
 
-    for c in range(num_courses):
-        if color[c] == 0 and not dfs(c):
-            return []
-
-    return order[::-1]
+    return order if len(order) == num_courses else []
 
 
 if __name__ == "__main__":

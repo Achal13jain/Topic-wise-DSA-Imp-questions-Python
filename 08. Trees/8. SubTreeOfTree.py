@@ -4,7 +4,7 @@ LeetCode: https://leetcode.com/problems/subtree-of-another-tree/
 
 Time Complexity: O(n * m) (Worst case); can be optimized to O(n+m) via Merkle hashing or serialization.
 Space Complexity: O(h)
-Why optimal: Standard recursive check is intuitive; advanced linear approaches exist but are complex to implement.
+Why optimal: Explicit stacks avoid recursion-depth failures while comparing each candidate subtree.
 """
 
 # Check if subRoot is a subtree of root.
@@ -14,23 +14,32 @@ Why optimal: Standard recursive check is intuitive; advanced linear approaches e
 # Use helper isSameTree
 
 def is_same_tree(s, t):
-    if not s and not t:
-        return True
-    if not s or not t:
-        return False
-    if s.val != t.val:
-        return False
-
-    return is_same_tree(s.left, t.left) and is_same_tree(s.right, t.right)
+    stack = [(s, t)]
+    while stack:
+        first, second = stack.pop()
+        if not first and not second:
+            continue
+        if not first or not second or first.val != second.val:
+            return False
+        stack.append((first.left, second.left))
+        stack.append((first.right, second.right))
+    return True
 
 def is_subtree(root, subRoot):
+    if not subRoot:
+        return True
     if not root:
         return False
-
-    if is_same_tree(root, subRoot):
-        return True
-
-    return is_subtree(root.left, subRoot) or is_subtree(root.right, subRoot)
+    stack = [root]
+    while stack:
+        node = stack.pop()
+        if node.val == subRoot.val and is_same_tree(node, subRoot):
+            return True
+        if node.left:
+            stack.append(node.left)
+        if node.right:
+            stack.append(node.right)
+    return False
 
 
 # Time Complexity O(n x m)

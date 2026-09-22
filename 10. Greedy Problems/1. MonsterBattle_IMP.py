@@ -23,9 +23,7 @@ Why optimal: Fighting the weakest monsters first (greedy) maximizes power accumu
 
 def can_defeat_all(monsters, power):
     # Sort monsters by power (weakest first)
-    monsters.sort()
-
-    for m in monsters:
+    for m in sorted(monsters):
         if power < m:
             return False   # Cannot defeat this monster
         power += m         # Gain power after defeating
@@ -60,5 +58,6 @@ def maxMonstersDefeated(E, Power, Bonus, N):
 
     return count
 
-print(maxMonstersDefeated(10, [5, 15, 10], [5, 10, 5], 3))  # Output: 2
+if __name__ == "__main__":
+    print(maxMonstersDefeated(10, [5, 15, 10], [5, 10, 5], 3))  # Output: 2
 #Time complexity: O(N log N) due to sorting

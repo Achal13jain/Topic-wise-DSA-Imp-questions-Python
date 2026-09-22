@@ -14,16 +14,33 @@ Why optimal: Single pass DFS finds targets and bubbles up the LCA without extra 
 # If both sides return non-null → root is LCA
 
 def lowest_common_ancestor(root, p, q):
-    if not root or root == p or root == q:
-        return root
+    if not root:
+        return None
 
-    left = lowest_common_ancestor(root.left, p, q)
-    right = lowest_common_ancestor(root.right, p, q)
+    parents = {root: None}
+    stack = [root]
+    while stack and (p not in parents or q not in parents):
+        node = stack.pop()
+        if node.left:
+            parents[node.left] = node
+            stack.append(node.left)
+        if node.right:
+            parents[node.right] = node
+            stack.append(node.right)
 
-    if left and right:
-        return root
+    if p not in parents or q not in parents:
+        return None
 
-    return left if left else right
+    ancestors = set()
+    node = p
+    while node is not None:
+        ancestors.add(node)
+        node = parents[node]
+
+    node = q
+    while node not in ancestors:
+        node = parents[node]
+    return node
 
 # Time Complexity O(n)
 # Space Complexity O(h)

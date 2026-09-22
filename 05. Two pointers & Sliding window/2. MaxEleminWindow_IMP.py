@@ -21,6 +21,8 @@ Why optimal: Monotonic Deque ensures we only store useful indices, allowing O(1)
 from collections import deque
 
 def sliding_window_max(nums, k):
+    if k <= 0 or k > len(nums):
+        return []
     dq = deque()   # stores indices
     result = []
 
@@ -42,9 +44,10 @@ def sliding_window_max(nums, k):
 
     return result
 # Example usage:
-nums = [1,3,-1,-3,5,3,6,7]
-k = 3
-result = sliding_window_max(nums, k)
-print(result)  # Output: [3,3,5,5,6,7]
+if __name__ == "__main__":
+    nums = [1,3,-1,-3,5,3,6,7]
+    k = 3
+    result = sliding_window_max(nums, k)
+    print(result)  # Output: [3,3,5,5,6,7]
 # Time Complexity: O(n)
 # Space Complexity: O(k)
